@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// deklaracja zmiennych
 grav = 0.5; // siła grawitacji
-spd = 8; // predkosc
+spd = 5; // predkosc
 jump_speed = 8; // skok
 hspd = 0; // predkosc pozioma
 vspd = 0; // predkosc pionowa
@@ -100,12 +100,9 @@ if (left_key) // po wcisnieciu klawisza
 }
 
 if (dash_key) // po wcisnieciu klawisza
-{
-    if (hspd &gt; 0)
-        hspd += 15; // dodajemy przypisana predkosc
-    if (hspd &lt; 0)
-        hspd -= 15; // dodajemy przypisana predkosc
-}
+    spd=10;
+else
+    spd=5;
 
 
 // gdy sie nie porusza
