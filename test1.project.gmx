@@ -23,6 +23,7 @@
     <object>objects\debug_info</object>
     <objects name="mirrors">
       <object>objects\obj_mirrorW</object>
+      <object>objects\obj_mirrorS</object>
     </objects>
   </objects>
   <rooms name="rooms">
