@@ -22,6 +22,7 @@
     <object>objects\obj_wall</object>
     <object>objects\debug_info</object>
     <objects name="mirrors">
+      <object>objects\par_mirror</object>
       <object>objects\obj_mirrorW</object>
       <object>objects\obj_mirrorS</object>
     </objects>
