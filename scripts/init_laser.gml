@@ -11,14 +11,14 @@ color = argument2;
 
 for (i=0; (i<length) && (!collision_point (xx+lengthdir_x(i,dir), yy+lengthdir_x(i,dir), obj_wall,1,1)); i+=precision)
 {
-    distance=i;    // po napotkaniu kolizji (osiagnieciu max dlugosci) przypisuje wartosc dlugosci lasera
+    dis=i;    // po napotkaniu kolizji (osiagnieciu max dlugosci) przypisuje wartosc dlugosci lasera
 }
 
 // ustalanie koordynatow konca rysowania lasera
-x1 = xx+lengthdir_x(distance,dir);
-y1 = xx+lengthdir_x(distance,dir);
-x2 = xx+lengthdir_x(distance+precision,dir);
-y2 = xx+lengthdir_x(distance+precision,dir);
+x1 = xx+lengthdir_x(dis,dir);
+y1 = xx+lengthdir_x(dis,dir);
+x2 = xx+lengthdir_x(dis+precision,dir);
+y2 = xx+lengthdir_x(dis+precision,dir);
 
 //rysowanie lasera
 draw_laser(xx,yy,x2,y2,3,color);
