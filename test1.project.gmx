@@ -14,9 +14,14 @@
       <sprite>sprites\spr_mirrorN</sprite>
       <sprite>sprites\spr_mirrorS</sprite>
     </sprites>
+    <sprite>sprites\spr_emitter</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\draw_laser.gml</script>
+    <script>scripts\init_laser.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
@@ -26,6 +31,7 @@
       <object>objects\obj_mirrorW</object>
       <object>objects\obj_mirrorS</object>
     </objects>
+    <object>objects\obj_emitter</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
