@@ -1,9 +1,11 @@
 ///draw_laser(x1,x2,y1,y2,width,color)
 
 x1 = argument0;
-x2 = argument1;
-y1 = argument2;
+y1 = argument1;
+
+x2 = argument2;
 y2 = argument3;
+
 width = argument4;
 color = argument5;
 

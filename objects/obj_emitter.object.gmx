@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>randomize()
-dis = 0
+            <string>dis = 0
 dis2 = 0
 dir = 0
 dir2 = 0
@@ -53,7 +52,10 @@ spe = 3
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle = point_direction(x,y,mouse_x,mouse_y)
+            <string>/// Draw Laser
+
+image_angle = point_direction(x,y,mouse_x,mouse_y)
+
 
 if mouse_check_button(mb_left) {
     dir = image_angle
