@@ -15,6 +15,7 @@
       <sprite>sprites\spr_mirrorS</sprite>
     </sprites>
     <sprite>sprites\spr_emitter</sprite>
+    <sprite>sprites\spr_diff</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -29,9 +30,12 @@
     <objects name="mirrors">
       <object>objects\par_mirror</object>
       <object>objects\obj_mirrorW</object>
+      <object>objects\obj_mirrorE</object>
       <object>objects\obj_mirrorS</object>
+      <object>objects\obj_mirrorN</object>
     </objects>
     <object>objects\obj_emitter</object>
+    <object>objects\obj_diff</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

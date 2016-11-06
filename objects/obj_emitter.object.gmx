@@ -55,8 +55,6 @@ spe = 3
             <string>/// Draw Laser
 
 image_angle = point_direction(x,y,mouse_x,mouse_y)
-
-
 if mouse_check_button(mb_left) {
     dir = image_angle
     xx = x

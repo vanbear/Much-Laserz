@@ -15,10 +15,20 @@ for (i=0; (i<length) && (!collision_point (xx+lengthdir_x(i,dir), yy+lengthdir_y
 }
 
 // ustalanie koordynatow konca rysowania lasera
-x1 = xx+lengthdir_x(dis,dir);
-y1 = yy+lengthdir_y(dis,dir);
-x2 = xx+lengthdir_x(dis+precision,dir);
-y2 = yy+lengthdir_y(dis+precision,dir);
+xx1 = xx+lengthdir_x(dis,dir);
+yy1 = yy+lengthdir_y(dis,dir);
+xx2 = xx+lengthdir_x(dis+precision,dir);
+yy2 = yy+lengthdir_y(dis+precision,dir);
 
 //rysowanie lasera
-draw_laser(xx,yy,x2,y2,3,color);
+draw_laser(xx,yy,xx2,yy2,3,color);
+
+//checks if laser is colliding with mirror, and if it is then make the mirror reflect
+if collision_point(xx1,yy1,par_mirror,0,1) || collision_point(xx2,yy2,par_mirror,0,1) {
+    inst = instance_nearest(xx2,yy2,par_mirror)
+    inst.xx = xx1
+    inst.yy = yy1
+    inst.dir = inst.v1 + (inst.v2 - dir)
+    inst.dis = length-dis
+    with inst {init_laser(dis,5,color)}
+}
