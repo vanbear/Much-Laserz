@@ -16,26 +16,22 @@
     </sprites>
     <sprite>sprites\spr_emitter</sprite>
     <sprite>sprites\spr_diff</sprite>
+    <sprite>sprites\mirror_test</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\draw_laser.gml</script>
     <script>scripts\init_laser.gml</script>
+    <script>scripts\collision_normal.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
     <object>objects\debug_info</object>
-    <objects name="mirrors">
-      <object>objects\par_mirror</object>
-      <object>objects\obj_mirrorW</object>
-      <object>objects\obj_mirrorE</object>
-      <object>objects\obj_mirrorS</object>
-      <object>objects\obj_mirrorN</object>
-    </objects>
     <object>objects\obj_emitter</object>
     <object>objects\obj_diff</object>
+    <object>objects\obj_mirrortest</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

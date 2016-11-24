@@ -3,8 +3,8 @@
   <caption></caption>
   <width>2048</width>
   <height>1024</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>8</vsnap>
+  <hsnap>8</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>-1</persistent>
@@ -305,8 +305,6 @@
     <instance objName="obj_wall" x="320" y="0" name="inst_B0101095" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="288" y="0" name="inst_BF2B1D98" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="256" y="0" name="inst_5DDEB77C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorW" x="832" y="192" name="inst_38B8145F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorW" x="832" y="160" name="inst_CB5CAC78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="320" y="96" name="inst_F2E080B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="352" y="96" name="inst_9911E322" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="384" y="96" name="inst_19E2E644" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -454,58 +452,12 @@
     <instance objName="obj_wall" x="64" y="704" name="inst_EC43CBC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="32" y="704" name="inst_C07D4EC7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="96" y="96" name="inst_E7CCA6A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorE" x="288" y="160" name="inst_4B38C998" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorE" x="288" y="192" name="inst_93B40DFA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorS" x="352" y="96" name="inst_21507247" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorS" x="384" y="96" name="inst_4FC66267" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorS" x="416" y="96" name="inst_68C9356C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorS" x="448" y="96" name="inst_12B0F001" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorN" x="640" y="256" name="inst_87B1D186" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorN" x="736" y="256" name="inst_B5400B96" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorN" x="704" y="256" name="inst_CA1EDF1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorN" x="672" y="256" name="inst_E04985B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorN" x="768" y="256" name="inst_7000C015" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_emitter" x="576" y="192" name="inst_9CFC38D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorN" x="608" y="256" name="inst_8D815734" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorN" x="544" y="256" name="inst_D1C87BB4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorN" x="512" y="256" name="inst_1E4DD3E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorN" x="576" y="256" name="inst_E598E65B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorS" x="480" y="96" name="inst_3FACEF99" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorS" x="512" y="96" name="inst_66C6AE19" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorS" x="544" y="96" name="inst_18070013" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorS" x="576" y="96" name="inst_41BB6FAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorS" x="608" y="96" name="inst_B0B5127A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_emitter" x="179" y="148" name="inst_71D810CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_emitter" x="268" y="147" name="inst_A5DE0E90" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_emitter" x="178" y="239" name="inst_0D409750" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_emitter" x="271" y="238" name="inst_4DFA51EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorE" x="384" y="544" name="inst_4C01790A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorE" x="736" y="544" name="inst_DABBF0AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorE" x="736" y="512" name="inst_6B2FB640" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorW" x="832" y="608" name="inst_E973BFCB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorW" x="832" y="576" name="inst_B0D60284" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorW" x="832" y="544" name="inst_D511FF78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorW" x="832" y="512" name="inst_9676F858" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorW" x="832" y="480" name="inst_AAADAD93" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorW" x="832" y="448" name="inst_D1FA1B1E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorW" x="736" y="544" name="inst_935492E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorW" x="544" y="512" name="inst_D9227046" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorW" x="224" y="544" name="inst_28B54BDF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorW" x="224" y="512" name="inst_A7089B7A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_emitter" x="184" y="617" name="inst_5317768D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorE" x="224" y="512" name="inst_E7991FC3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorE" x="128" y="448" name="inst_AA2E204B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorE" x="128" y="480" name="inst_0036E80D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorE" x="128" y="512" name="inst_0401359E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorE" x="128" y="544" name="inst_5344F01B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorS" x="416" y="416" name="inst_DF4585C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorS" x="448" y="416" name="inst_5BAED5FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorS" x="480" y="416" name="inst_760BF762" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorS" x="512" y="416" name="inst_D1012A03" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorN" x="416" y="640" name="inst_343735D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorN" x="448" y="640" name="inst_1B2470AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorN" x="480" y="640" name="inst_815288BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorN" x="512" y="640" name="inst_718CC000" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_emitter" x="176" y="623" name="inst_5317768D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_diff" x="768" y="320" name="inst_EF530E60" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="768" y="288" name="inst_3EBE99EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="608" y="288" name="inst_2773F688" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -513,22 +465,23 @@
     <instance objName="obj_wall" x="608" y="352" name="inst_3D4E8497" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="608" y="384" name="inst_78181FC8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_emitter" x="672" y="384" name="inst_58DC0E1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_emitter" x="384" y="384" name="inst_AED72F4C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorW" x="544" y="352" name="inst_1121DE80" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorE" x="192" y="352" name="inst_2140C01A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorS" x="224" y="320" name="inst_D16315F1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="45"/>
-    <instance objName="obj_mirrorN" x="448" y="320" name="inst_B1445195" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="224" y="320" name="inst_E040AC95" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="45"/>
-    <instance objName="obj_mirrorS" x="640" y="96" name="inst_B8280F48" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorS" x="672" y="96" name="inst_B3E29593" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorS" x="704" y="96" name="inst_CA68D334" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorS" x="736" y="96" name="inst_B631AA66" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorS" x="768" y="96" name="inst_4A866F06" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorN" x="352" y="256" name="inst_84F0FF01" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorN" x="384" y="256" name="inst_0EB6742C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorN" x="416" y="256" name="inst_B7476061" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorN" x="448" y="256" name="inst_40F27203" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrorN" x="480" y="256" name="inst_48DCAC2A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_emitter" x="384" y="352" name="inst_AED72F4C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="170" y="318" name="inst_E040AC95" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="45"/>
+    <instance objName="obj_mirrortest" x="512" y="352" name="inst_AEF24F80" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mirrortest" x="256" y="384" name="inst_D16724B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mirrortest" x="320" y="320" name="inst_81D55931" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_mirrortest" x="423" y="399" name="inst_7FD7946E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_mirrortest" x="457" y="309" name="inst_2D15D41B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="45"/>
+    <instance objName="obj_mirrortest" x="803" y="456" name="inst_34EA7B6F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="45"/>
+    <instance objName="obj_mirrortest" x="807" y="637" name="inst_9394EA93" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="135"/>
+    <instance objName="obj_mirrortest" x="263" y="481" name="inst_012E6A54" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="135"/>
+    <instance objName="obj_mirrortest" x="255" y="524" name="inst_116609C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="45"/>
+    <instance objName="obj_mirrortest" x="320" y="224" name="inst_BD0E215C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mirrortest" x="320" y="128" name="inst_CDB65A23" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mirrortest" x="824" y="128" name="inst_BFB1DC08" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mirrortest" x="824" y="224" name="inst_261FFA38" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mirrortest" x="632" y="288" name="inst_15AC4218" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mirrortest" x="632" y="384" name="inst_E618EDCD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
