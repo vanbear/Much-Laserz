@@ -8,15 +8,17 @@
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_wall</sprite>
-    <sprites name="mirrors">
-      <sprite>sprites\spr_mirrorW</sprite>
-      <sprite>sprites\spr_mirrorE</sprite>
-      <sprite>sprites\spr_mirrorN</sprite>
-      <sprite>sprites\spr_mirrorS</sprite>
-    </sprites>
     <sprite>sprites\spr_emitter</sprite>
     <sprite>sprites\spr_diff</sprite>
     <sprite>sprites\mirror_test</sprite>
+    <sprites name="sensor">
+      <sprite>sprites\spr_sensor_active</sprite>
+      <sprite>sprites\spr_sensor_unactive</sprite>
+    </sprites>
+    <sprites name="doors">
+      <sprite>sprites\spr_door_open</sprite>
+      <sprite>sprites\spr_door_closed</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -32,6 +34,8 @@
     <object>objects\obj_emitter</object>
     <object>objects\obj_diff</object>
     <object>objects\obj_mirrortest</object>
+    <object>objects\obj_sensor</object>
+    <object>objects\obj_door</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

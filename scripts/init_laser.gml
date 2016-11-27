@@ -28,8 +28,7 @@ for (i=0; (i<length); i+=precision)
     }
     if (collision_point (lx, ly , obj_mirrortest,1,1))
     {
-        dis=i;    // po napotkaniu kolizji (osiagnieciu max dlugosci) przypisuje wartosc dlugosci lasera
-        // ustalanie koordynatow konca rysowania lasera
+        dis=i;
         xx1 = xx+lengthdir_x(dis,dir);
         yy1 = yy+lengthdir_y(dis,dir);
         xx2 = xx+lengthdir_x(dis+precision,dir);
@@ -37,9 +36,9 @@ for (i=0; (i<length); i+=precision)
         //rysowanie lasera
         draw_laser(xx,yy,xx2,yy2,3,c_blue);
         
-        inst = instance_nearest(xx2,yy2,obj_mirrortest)
-        inst.xx = xx1
-        inst.yy = yy1
+        inst = instance_nearest(xx2,yy2,obj_mirrortest);
+        inst.xx = xx1;
+        inst.yy = yy1;
         
         n=collision_normal(xx1,yy1,inst,7.5,1);
         if (n == -1) show_debug_message("ERROR: ");
@@ -50,6 +49,20 @@ for (i=0; (i<length); i+=precision)
         with inst {init_laser(dis,1,color)}
         break;
     }
+    if (collision_point (lx, ly , obj_sensor,1,1))
+    {
+        dis=i; 
+        xx1 = xx+lengthdir_x(dis,dir);
+        yy1 = yy+lengthdir_y(dis,dir);
+        xx2 = xx+lengthdir_x(dis+precision,dir);
+        yy2 = yy+lengthdir_y(dis+precision,dir);
+        //rysowanie lasera
+        draw_laser(xx,yy,xx2,yy2,3,c_blue);
+        
+        inst = instance_nearest(xx2,yy2,obj_sensor);
+        inst.active=1;
+        break;
+    }  
 }
 
 

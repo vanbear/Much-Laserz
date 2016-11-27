@@ -482,6 +482,10 @@
     <instance objName="obj_mirrortest" x="824" y="224" name="inst_261FFA38" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mirrortest" x="632" y="288" name="inst_15AC4218" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mirrortest" x="632" y="384" name="inst_E618EDCD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sensor" x="512" y="512" name="inst_6DDA398B" locked="0" code="ident=1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door" x="488" y="32" name="inst_99AFD398" locked="0" code="ident=1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door" x="576" y="32" name="inst_13D92B49" locked="0" code="ident=2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sensor" x="176" y="464" name="inst_C6740B33" locked="0" code="ident=2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
