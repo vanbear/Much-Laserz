@@ -79,7 +79,12 @@ active=0;
             <string>/// state change
 if (active==0)
 {
-    sprite_index=spr_sensor_unactive;   
+    sprite_index=spr_sensor_unactive;  
+    with (obj_door) 
+    {
+        if (other.ident==ident)
+        opened=0;
+    } 
 }
 else
 {
