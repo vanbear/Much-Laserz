@@ -11,6 +11,7 @@
     <sprite>sprites\spr_emitter</sprite>
     <sprite>sprites\spr_diff</sprite>
     <sprite>sprites\mirror_test</sprite>
+    <sprite>sprites\spr_mirrorRect</sprite>
     <sprites name="sensor">
       <sprite>sprites\spr_sensor_active</sprite>
       <sprite>sprites\spr_sensor_unactive</sprite>
@@ -36,6 +37,7 @@
     <object>objects\obj_mirrortest</object>
     <object>objects\obj_sensor</object>
     <object>objects\obj_door</object>
+    <object>objects\obj_master</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

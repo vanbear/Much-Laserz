@@ -41,11 +41,11 @@ for (i=0; (i<length); i+=precision)
         inst.yy = yy1;
         
         n=collision_normal(xx1,yy1,inst,7.5,1);
-        if (n == -1) show_debug_message("ERROR: ");
+        if (n == -1) {show_debug_message("ERROR: "); break;}
         
         inst.dir = (2*n)-dir-180;
-            
         inst.dis = length-dis;
+        
         with inst {init_laser(dis,1,color)}
         break;
     }
