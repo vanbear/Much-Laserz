@@ -68,7 +68,7 @@ gamepad_set_axis_deadzone(0,0.4);
     var left_key = keyboard_check(ord('A')) || (gamepad_axis_value(0,gp_axislh) &lt; 0);    //klaiwsz poruszsania sie w lewo
     var jump_key = keyboard_check_pressed(ord('W')) || (gamepad_button_check_pressed(0,gp_face1));       //klaiwsz skoku
     var dash_key = keyboard_check(vk_shift) || (gamepad_button_value(0,gp_shoulderrb)&gt;0.2); 
-
+    var use_key = keyboard_check_pressed(ord('E')) || (gamepad_button_check_pressed(0,gp_face3));
 
 
 // kolizja z podłożem
@@ -120,6 +120,23 @@ if ((!right_key &amp;&amp; !left_key) || (right_key &amp;&amp; left_key))  // gd
                 hspd+=frict;
     }
 }
+
+
+
+if (use_key)
+{
+    if (place_meeting(x,y,obj_power))
+    {
+        with (instance_place(x, y, obj_power))
+        {
+                if (active) active=false;
+                else active=true;
+        }
+    }
+}
+
+
+
 
 
 // kolizje ze scianami poziomo (poziomo MUSI byc sprawdzane przed pionem!!!)

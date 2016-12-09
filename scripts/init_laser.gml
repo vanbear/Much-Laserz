@@ -46,7 +46,7 @@ for (i=0; (i<length); i+=precision)
         inst.dir = (2*n)-dir-180;
         inst.dis = length-dis;
         
-        with inst {init_laser(dis,1,color)}
+        with inst {init_laser(dis,precision,color)}
         break;
     }
     if (collision_point (lx, ly , obj_sensor,1,1))
@@ -57,10 +57,11 @@ for (i=0; (i<length); i+=precision)
         xx2 = xx+lengthdir_x(dis+precision,dir);
         yy2 = yy+lengthdir_y(dis+precision,dir);
         //rysowanie lasera
-        draw_laser(xx,yy,xx2,yy2,3,c_blue);
+        draw_laser(xx,yy,xx2,yy2,3,c_green);
         
         inst = instance_nearest(xx2,yy2,obj_sensor);
-        inst.active=1;
+        inst.active=true;
+        inst.alarm[0] = 2;
         break;
     }  
 }

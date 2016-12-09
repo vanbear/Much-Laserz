@@ -20,6 +20,10 @@
       <sprite>sprites\spr_door_open</sprite>
       <sprite>sprites\spr_door_closed</sprite>
     </sprites>
+    <sprites name="power_panel">
+      <sprite>sprites\spr_power_off</sprite>
+      <sprite>sprites\spr_power_on</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -38,6 +42,7 @@
     <object>objects\obj_sensor</object>
     <object>objects\obj_door</object>
     <object>objects\obj_master</object>
+    <object>objects\obj_power</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
