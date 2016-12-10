@@ -69,6 +69,7 @@ gamepad_set_axis_deadzone(0,0.4);
     var jump_key = keyboard_check_pressed(ord('W')) || (gamepad_button_check_pressed(0,gp_face1));       //klaiwsz skoku
     var dash_key = keyboard_check(vk_shift) || (gamepad_button_value(0,gp_shoulderrb)&gt;0.2); 
     var use_key = keyboard_check_pressed(ord('E')) || (gamepad_button_check_pressed(0,gp_face3));
+    var use_key_hold = keyboard_check(ord('E')) || (gamepad_button_check(0,gp_face3));
 
 
 // kolizja z podłożem
@@ -122,21 +123,33 @@ if ((!right_key &amp;&amp; !left_key) || (right_key &amp;&amp; left_key))  // gd
 }
 
 
-
+// interakcja z włącznikiem
 if (use_key)
 {
-    if (place_meeting(x,y,obj_power))
-    {
+    //if (place_meeting(x,y,obj_power))
+    //{
         with (instance_place(x, y, obj_power))
         {
                 if (active) active=false;
                 else active=true;
-        }
-    }
+        }    
 }
 
 
-
+//interakcja z kołem do obracania
+if (use_key_hold)
+{   
+    with (instance_place(x, y, obj_wheel))
+    {
+        if !active
+            active=true;
+    }
+}
+if (!use_key_hold) or (!place_meeting(x,y,obj_wheel))
+{
+    with(obj_wheel)
+        active=false;
+}
 
 
 // kolizje ze scianami poziomo (poziomo MUSI byc sprawdzane przed pionem!!!)

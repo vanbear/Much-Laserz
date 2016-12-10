@@ -32,6 +32,7 @@ dir2 = 0
 spe = 3
 
 active=false;
+ident=-1;
 </string>
           </argument>
         </arguments>
