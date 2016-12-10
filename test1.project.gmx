@@ -35,6 +35,7 @@
     <script>scripts\draw_laser.gml</script>
     <script>scripts\init_laser.gml</script>
     <script>scripts\collision_normal.gml</script>
+    <script>scripts\draw_focus_outline.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>

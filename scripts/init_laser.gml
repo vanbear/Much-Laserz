@@ -4,6 +4,8 @@ length = argument0;
 precision = argument1; // im mniejsza liczba tym dokładniejszy bardziej pamieiozerny rayasting
 color = argument2;
 
+var width=1;
+
 // ustalanie kolizji z otoczeniem
 // lengthdir_x i _y zwracają skladowe x i y wektora z podana dlugoscia i kierunkiem
 // petla dziala dopoki wartosc dlugosci lasera nie osiagnie max wartosci lub nie napotka sciany sprawdzajac kolejne polozenia okreslone podanym wektorem
@@ -22,7 +24,7 @@ for (i=0; (i<length); i+=precision)
         xx2 = xx+lengthdir_x(dis+precision,dir);
         yy2 = yy+lengthdir_y(dis+precision,dir);
         //rysowanie lasera
-        draw_laser(xx,yy,xx2,yy2,3,color);
+        draw_laser(xx,yy,xx2,yy2,width,color);
         
         break;
     }
@@ -34,7 +36,7 @@ for (i=0; (i<length); i+=precision)
         xx2 = xx+lengthdir_x(dis+precision,dir);
         yy2 = yy+lengthdir_y(dis+precision,dir);
         //rysowanie lasera
-        draw_laser(xx,yy,xx2,yy2,3,c_blue);
+        draw_laser(xx,yy,xx2,yy2,width,color);
         
         inst = instance_nearest(xx2,yy2,obj_mirrortest);
         inst.xx = xx1;
@@ -57,7 +59,7 @@ for (i=0; (i<length); i+=precision)
         xx2 = xx+lengthdir_x(dis+precision,dir);
         yy2 = yy+lengthdir_y(dis+precision,dir);
         //rysowanie lasera
-        draw_laser(xx,yy,xx2,yy2,3,c_green);
+        draw_laser(xx,yy,xx2,yy2,width,color);
         
         inst = instance_nearest(xx2,yy2,obj_sensor);
         inst.active=true;

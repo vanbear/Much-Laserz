@@ -52,6 +52,9 @@
 
 if reset_key
     room_restart();
+    
+    
+draw_focus_outline(obj_player);
 </string>
           </argument>
         </arguments>

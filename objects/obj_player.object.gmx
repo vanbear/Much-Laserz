@@ -123,16 +123,17 @@ if ((!right_key &amp;&amp; !left_key) || (right_key &amp;&amp; left_key))  // gd
 }
 
 
-// interakcja z włącznikiem
-if (use_key)
-{
+
+with (instance_place(x, y, obj_power))
+{// interakcja z włącznikiem
+    draw_focus_outline(obj_power);
+    if (use_key)
+    {
     //if (place_meeting(x,y,obj_power))
     //{
-        with (instance_place(x, y, obj_power))
-        {
-                if (active) active=false;
-                else active=true;
-        }    
+        if (active) active=false;
+        else active=true; 
+    }    
 }
 
 
@@ -180,6 +181,47 @@ if (place_meeting(x, y+vspd, obj_wall)) //sprawdza, czy w kolejnym kroku w pozio
 
 // poruszanie sie w pionie
 y += vspd;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// interakcja - rysowanie obramowania
+
+
+// interakcja z włącznikiem
+if (place_meeting(x, y, obj_power))
+{
+    inst = instance_place(x, y, obj_power);
+    draw_focus_outline(inst);
+}
+
+
+//interakcja z kołem do obracania
+if (place_meeting(x, y, obj_wheel))
+{
+    inst = instance_place(x, y, obj_wheel);
+    draw_focus_outline(inst);
+}
+
+draw_self();
 </string>
           </argument>
         </arguments>
