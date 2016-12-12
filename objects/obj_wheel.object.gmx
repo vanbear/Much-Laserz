@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>///deklaraja zmiennych
 
+dir = 0; // 0 - lewo, 1 - prawo
 active=false;
 </string>
           </argument>
@@ -50,7 +51,9 @@ active=false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!active)
+            <string>var rotation_speed = 0.5
+
+if (!active)
 {
     sprite_index=spr_wheel_off;   
 } 
@@ -58,16 +61,28 @@ else
 {
     sprite_index=spr_wheel_on; 
     
+    // obracanie emittera
     with (obj_emitter)
     {
         if (other.ident==ident)
-            image_angle-=1;
+        {
+           if (other.dir==0)
+              image_angle-=rotation_speed;
+           if (other.dir==1)
+              image_angle+=rotation_speed;
+        }
     }
+    
+    //obracanie lustra
     with (obj_mirrortest)
     {  
-        if (ident)
-            if (other.ident==ident)
-                image_angle-=1;
+        if (other.ident==ident)
+        {
+            if (other.dir==0)
+               image_angle-=rotation_speed;
+            if (other.dir==1)
+               image_angle+=rotation_speed;
+        }
     }
     
 }

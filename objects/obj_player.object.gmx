@@ -64,12 +64,16 @@ gamepad_set_axis_deadzone(0,0.4);
 
 // przypisanie klawiszy do zmiennych
 
-    var right_key = keyboard_check(ord('D')) || (gamepad_axis_value(0,gp_axislh) &gt; 0);   //klaiwsz poruszsania sie w prawo
-    var left_key = keyboard_check(ord('A')) || (gamepad_axis_value(0,gp_axislh) &lt; 0);    //klaiwsz poruszsania sie w lewo
+    var right_key = keyboard_check(ord('D')) || (gamepad_axis_value(0,gp_axislh) &gt; 0);                   //klaiwsz poruszsania sie w prawo
+    var left_key = keyboard_check(ord('A')) || (gamepad_axis_value(0,gp_axislh) &lt; 0);                    //klaiwsz poruszsania sie w lewo
     var jump_key = keyboard_check_pressed(ord('W')) || (gamepad_button_check_pressed(0,gp_face1));       //klaiwsz skoku
-    var dash_key = keyboard_check(vk_shift) || (gamepad_button_value(0,gp_shoulderrb)&gt;0.2); 
-    var use_key = keyboard_check_pressed(ord('E')) || (gamepad_button_check_pressed(0,gp_face3));
-    var use_key_hold = keyboard_check(ord('E')) || (gamepad_button_check(0,gp_face3));
+    var dash_key = keyboard_check(vk_shift) || (gamepad_button_value(0,gp_shoulderrb)&gt;0.2);              //klawisz sprintu
+    
+    var use_key = keyboard_check_pressed(ord('E')) || (gamepad_button_check_pressed(0,gp_face2));        //klawisze interakcji 1
+    var use_key_hold = keyboard_check(ord('E')) || (gamepad_button_check(0,gp_face2));
+    
+    var use_key2 = keyboard_check_pressed(ord('Q')) || (gamepad_button_check_pressed(0,gp_face3));       //klawisze interakcji 2
+    var use_key_hold2 = keyboard_check(ord('Q')) || (gamepad_button_check(0,gp_face3));
 
 
 // kolizja z podłożem
@@ -127,7 +131,7 @@ if ((!right_key &amp;&amp; !left_key) || (right_key &amp;&amp; left_key))  // gd
 with (instance_place(x, y, obj_power))
 {// interakcja z włącznikiem
     draw_focus_outline(obj_power);
-    if (use_key)
+    if (use_key) or (use_key2)
     {
     //if (place_meeting(x,y,obj_power))
     //{
@@ -138,15 +142,29 @@ with (instance_place(x, y, obj_power))
 
 
 //interakcja z kołem do obracania
+var last_key=0;
+
 if (use_key_hold)
 {   
     with (instance_place(x, y, obj_wheel))
     {
+        last_key=use_key_hold;
+        dir=0;
         if !active
             active=true;
     }
 }
-if (!use_key_hold) or (!place_meeting(x,y,obj_wheel))
+if (use_key_hold2)
+{   
+    with (instance_place(x, y, obj_wheel))
+    {
+        last_key=use_key_hold2;
+        dir=1;
+        if !active
+            active=true;
+    }
+}
+if (!last_key) or (!place_meeting(x,y,obj_wheel))
 {
     with(obj_wheel)
         active=false;
