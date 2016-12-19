@@ -170,6 +170,33 @@ if (!last_key) or (!place_meeting(x,y,obj_wheel))
         active=false;
 }
 
+//interakcja z panelem do poruszania obiektami
+if (use_key_hold)
+{   
+    with (instance_place(x, y, obj_movepanel))
+    {
+        last_key=use_key_hold;
+        dir=0;
+        if !active
+            active=true;
+    }
+}
+if (use_key_hold2)
+{   
+    with (instance_place(x, y, obj_movepanel))
+    {
+        last_key=use_key_hold2;
+        dir=1;
+        if !active
+            active=true;
+    }
+}
+if (!last_key) or (!place_meeting(x,y,obj_movepanel))
+{
+    with(obj_movepanel)
+        active=false;
+}
+
 
 // kolizje ze scianami poziomo (poziomo MUSI byc sprawdzane przed pionem!!!)
 if (place_meeting(x+hspd, y, obj_wall))
@@ -236,6 +263,14 @@ if (place_meeting(x, y, obj_power))
 if (place_meeting(x, y, obj_wheel))
 {
     inst = instance_place(x, y, obj_wheel);
+    draw_focus_outline(inst);
+}
+
+
+//interakcja z kołem do obracania
+if (place_meeting(x, y, obj_movepanel))
+{
+    inst = instance_place(x, y, obj_movepanel);
     draw_focus_outline(inst);
 }
 

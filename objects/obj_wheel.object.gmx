@@ -51,7 +51,7 @@ active=false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var rotation_speed = 0.5
+            <string>var rotation_speed = 0.5;
 
 if (!active)
 {

@@ -28,9 +28,17 @@
       <sprite>sprites\spr_wheel_off</sprite>
       <sprite>sprites\spr_wheel_on</sprite>
     </sprites>
+    <sprites name="move_panel">
+      <sprite>sprites\spr_movepanel_off</sprite>
+      <sprite>sprites\spr_movepanel_on</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\pth_testroom1</path>
+    <path>paths\pth_testroom2</path>
+    <path>paths\pth_testroom3</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\draw_laser.gml</script>
     <script>scripts\init_laser.gml</script>
@@ -49,6 +57,7 @@
     <object>objects\obj_master</object>
     <object>objects\obj_power</object>
     <object>objects\obj_wheel</object>
+    <object>objects\obj_movepanel</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
