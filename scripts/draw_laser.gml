@@ -28,3 +28,4 @@ draw_line_width(x1,y1,x2,y2,width);
 
 draw_set_alpha(1)
 draw_set_blend_mode(0)
+draw_set_colour(c_black);

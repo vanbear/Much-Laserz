@@ -45,19 +45,32 @@
     <script>scripts\collision_normal.gml</script>
     <script>scripts\draw_focus_outline.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_menu</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
-    <object>objects\obj_wall</object>
-    <object>objects\debug_info</object>
-    <object>objects\obj_emitter</object>
-    <object>objects\obj_diff</object>
-    <object>objects\obj_mirrortest</object>
-    <object>objects\obj_sensor</object>
-    <object>objects\obj_door</object>
-    <object>objects\obj_master</object>
-    <object>objects\obj_power</object>
-    <object>objects\obj_wheel</object>
-    <object>objects\obj_movepanel</object>
+    <objects name="game">
+      <object>objects\obj_pause</object>
+      <object>objects\obj_master</object>
+      <object>objects\draw_paths</object>
+    </objects>
+    <objects name="panels">
+      <object>objects\obj_power</object>
+      <object>objects\obj_movepanel</object>
+      <object>objects\obj_wheel</object>
+    </objects>
+    <objects name="laser stuff">
+      <object>objects\obj_emitter</object>
+      <object>objects\obj_sensor</object>
+    </objects>
+    <objects name="mirrors">
+      <object>objects\obj_mirrortest</object>
+    </objects>
+    <objects name="environment">
+      <object>objects\obj_door</object>
+      <object>objects\obj_wall</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
