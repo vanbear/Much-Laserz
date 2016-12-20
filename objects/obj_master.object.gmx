@@ -4,11 +4,11 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>727379969</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="3" enumb="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,16 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// reset planszy
+            <string>/// lista poziomow
+global.levels[0] = rm_level_1;
+global.levels[1] = rm_level_2;
 
-var reset_key = keyboard_check(ord('R')) || (gamepad_button_check_pressed(0,gp_select));
-var esc_key = keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0,gp_start);
-
-if reset_key
-    room_restart();
-
-if esc_key
-   instance_create(0,0,obj_pause);
+global.names[0] = "Poziom 1";
+global.names[1] = "Poziom 2";
 </string>
           </argument>
         </arguments>
@@ -58,7 +54,7 @@ if esc_key
           <argument>
             <kind>1</kind>
             <string>draw_set_font(-1);
-draw_text(5, 5, "FPS = " + string(fps));  // wyswietl licznik fps
+draw_text(10, 10, "FPS = " + string(fps));  // wyswietl licznik fps
 </string>
           </argument>
         </arguments>

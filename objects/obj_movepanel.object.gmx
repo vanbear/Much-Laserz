@@ -31,21 +31,48 @@ dir = 0; // 0 - lewo, 1 - prawo
 active = false;
 ident=-1;
 
+// ustawiam alarm na przypisywanie sciezek, 
+// zeby sprawdzalo po utworzeniu sie innych obiektow, inaczej sie psuje,
+alarm[0]=1; 
 
-// na początek zaczynam poruszanie sie po sciezce obiektow ktore maja takowa przypisana
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// na początek zaczynam poruszanie sie po sciezce obiektow ktore maja takowa przypisana
 // predkosc poczatkowa to 0, oczywiscie, poniewaz nie chcemy, zeby sobie jezdzily mimowolnie
 // pozniej, w Step Event, bedziemy zmieniac predkosc sciezki w zaleznosci od stanu guzika
 
 with(obj_emitter)
 {
-    path_start(pthname,0,path_action_reverse,1);
-    path_position+=0.001 //to tak, żeby sie obiekty nie trzesły na starcie xd 
+        path_start(pthname,0,path_action_reverse,1);
+        path_position+=0.001 //to tak, żeby sie obiekty nie trzesły na starcie xd 
 }
 
 with(obj_mirrortest)
 {
-    path_start(pthname,0,path_action_reverse,1);
-    path_position+=0.001
+        path_start(pthname,0,path_action_reverse,1);
+        path_position+=0.001;
 }
 </string>
           </argument>

@@ -51,17 +51,15 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_master" x="96" y="32" name="inst_FCA22DA8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="64" y="64" name="inst_4C0CA6B9" locked="0" code="" scaleX="24" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="32" y="64" name="inst_CB129CA8" locked="0" code="" scaleX="1" scaleY="15" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="832" y="64" name="inst_EDDA579E" locked="0" code="" scaleX="1" scaleY="15" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="64" y="512" name="inst_EACB46A2" locked="0" code="" scaleX="24" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="64" y="192" name="inst_59A5FF36" locked="0" code="" scaleX="24" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="384" y="112" name="inst_E4086C22" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_emitter" x="96" y="352" name="inst_AD090969" locked="0" code="ident=0;&#xA;pthname=pth_testroom3;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrortest" x="768" y="352" name="inst_19384DA1" locked="0" code="ident=11;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrortest" x="768" y="416" name="inst_013B8EB7" locked="0" code="pthname=pth_testroom2;&#xA;ident=33;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="135"/>
-    <instance objName="obj_mirrortest" x="432" y="416" name="inst_BEE457A4" locked="0" code="ident=22;&#xA;&#xA;pthname=pth_testroom1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="45"/>
+    <instance objName="obj_emitter" x="96" y="352" name="inst_AD090969" locked="0" code="ident=0;&#xA;pthname=pth_testroom3;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mirrortest" x="768" y="416" name="inst_013B8EB7" locked="0" code="pthname=pth_testroom2;&#xA;ident=33;" scaleX="1" scaleY="1" colour="4294967295" rotation="135"/>
+    <instance objName="obj_mirrortest" x="432" y="416" name="inst_BEE457A4" locked="0" code="ident=22;&#xA;&#xA;pthname=pth_testroom1;" scaleX="1" scaleY="1" colour="4294967295" rotation="45"/>
     <instance objName="obj_sensor" x="416" y="256" name="inst_54D8585C" locked="0" code="ident=0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="480" y="224" name="inst_747645BD" locked="0" code="" scaleX="1" scaleY="3.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_door" x="160" y="128" name="inst_2AFE2243" locked="0" code="ident=0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -75,6 +73,7 @@
     <instance objName="obj_movepanel" x="608" y="160" name="inst_57263F4B" locked="0" code="ident=33;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_movepanel" x="480" y="160" name="inst_82715BCD" locked="0" code="ident=0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="draw_paths" x="144" y="32" name="inst_F7ED0E77" locked="0" code="paths[0]=pth_testroom1;&#xA;paths[1]=pth_testroom2;&#xA;paths[2]=pth_testroom3;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mirrortest" x="640" y="272" name="inst_E7BAF23A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

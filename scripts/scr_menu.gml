@@ -4,7 +4,7 @@ switch(mpos)
 {
  case 0: 
  {
-    room_goto(rm_level_1); break;
+    room_goto(rm_level_select); break;
  }
  case 1: 
  {

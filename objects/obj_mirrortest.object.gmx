@@ -3,7 +3,7 @@
   <spriteName>mirror_test</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,10 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>///deklaraja zmiennych
-depth=-100;
-ident=-1;
-pthname=-1;
-
+depth = -100;
+ident = -1;
+pthname = -1;
 </string>
           </argument>
         </arguments>

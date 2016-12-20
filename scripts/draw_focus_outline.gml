@@ -1,6 +1,6 @@
 ///draw_focus_outline(object);
 var object = argument[0];
-var width = 4;
+var width = 3;
 var color = c_white;
 var alpha = .5;
 
