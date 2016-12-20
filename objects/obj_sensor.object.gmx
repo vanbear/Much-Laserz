@@ -50,7 +50,9 @@ active = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>active = false;
+            <string>/// wyłaczanie
+
+active = false;
 </string>
           </argument>
         </arguments>
@@ -74,24 +76,17 @@ active = false;
           <argument>
             <kind>1</kind>
             <string>/// state change
+
+
 if (!active)
 {
     sprite_index=spr_sensor_unactive;  
-    with (obj_door) 
-    {
-        if (other.ident==ident)
-        opened=false;
-    } 
 }
 else
 {
     sprite_index=spr_sensor_active; 
-    with (obj_door) 
-    {
-        if (other.ident==ident)
-        opened=true;
-    }
 }
+
 </string>
           </argument>
         </arguments>
@@ -114,7 +109,9 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>/// self
+
+draw_self();
 </string>
           </argument>
         </arguments>

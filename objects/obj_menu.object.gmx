@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>menu[0] = "Start";
 menu[1] = "O grze";
-menu[2] = "Wyjście";
+menu[2] = "Wyjscie";
 
 space = 64;
 mpos = 0;
@@ -56,7 +56,7 @@ gamepad_set_axis_deadzone(0,0.4);
           <argument>
             <kind>1</kind>
             <string>var move_up = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")) ||  gamepad_button_check_pressed(0,gp_padu);
-var move_down = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"))  gamepad_button_check_pressed(0,gp_padd);
+var move_down = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")) || gamepad_button_check_pressed(0,gp_padd);
 
 var select_key = keyboard_check_pressed(vk_enter) || keyboard_check_pressed(ord("E")) || gamepad_button_check_pressed(0,gp_face1) || gamepad_button_check_pressed(0,gp_start);
 

@@ -67,12 +67,22 @@ visible=true;
           <argument>
             <kind>1</kind>
             <string>var esc_key = keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0,gp_start);
+var quit_key = keyboard_check_pressed(ord("P")) || gamepad_button_check_pressed(0,gp_select);
+
 
 if (esc_key)
 {
     surface_free(pause_surface);
     instance_activate_all();
     instance_destroy();
+}
+
+if (quit_key)
+{
+    surface_free(pause_surface);
+    instance_activate_all();
+    instance_destroy();
+    room_goto(rm_menu);
 }
 </string>
           </argument>

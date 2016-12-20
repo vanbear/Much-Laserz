@@ -77,6 +77,7 @@
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
     <room>rooms\room0</room>
+    <room>rooms\rm_level_1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

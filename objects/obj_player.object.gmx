@@ -75,7 +75,9 @@ gamepad_set_axis_deadzone(0,0.4);
     var use_key2 = keyboard_check_pressed(ord('Q')) || (gamepad_button_check_pressed(0,gp_face3));       //klawisze interakcji 2
     var use_key_hold2 = keyboard_check(ord('Q')) || (gamepad_button_check(0,gp_face3));
 
+    var last_key=0;
 
+    
 // kolizja z podłożem
 if (place_meeting(x, y+1, obj_wall))  //co sie dzieje, gdy pod graczem jest podloze
 {
@@ -96,11 +98,14 @@ else // co sie dzieje, kiedy jestesmy w powietrzu
     }
 }
 
+
 // poruszanie sie w prawo
 if (right_key) // po wcisnieciu klawisza
 {
     hspd = spd; // dodajemy przypisana predkosc
 }
+
+
 
 // poruszanie sie w lewo
 if (left_key) // po wcisnieciu klawisza
@@ -108,12 +113,16 @@ if (left_key) // po wcisnieciu klawisza
     hspd = -spd; // dodajemy przypisana predkosc
 }
 
+
+
+// sprint
 if (dash_key) // po wcisnieciu klawisza
     spd=10;
 else
     spd=5;
 
 
+    
 // gdy sie nie porusza
 if ((!right_key &amp;&amp; !left_key) || (right_key &amp;&amp; left_key))  // gdy nie wciskamy zadnego klawisza poruszsania na boki lub wciskamy oba
 {
@@ -128,22 +137,58 @@ if ((!right_key &amp;&amp; !left_key) || (right_key &amp;&amp; left_key))  // gd
 
 
 
-with (instance_place(x, y, obj_power))
-{// interakcja z włącznikiem
-    draw_focus_outline(obj_power);
-    if (use_key) or (use_key2)
+
+// kolizje ze scianami poziomo (poziomo MUSI byc sprawdzane przed pionem!!!)
+if (place_meeting(x+hspd, y, obj_wall))
+{
+    while (!place_meeting(x+sign(hspd), y, obj_wall)) // sprawdza, czy dotykamy te sciane, sign zwraca wartosc 1 lub -1, w zaleznosci w ktora strone sie poruszamy, jezeli nie to...
     {
-    //if (place_meeting(x,y,obj_power))
-    //{
-        if (active) active=false;
-        else active=true; 
-    }    
+        x += sign(hspd); // poruszamy sie o ten jeden piksel w dana strone, az dotkniemy sciany
+    }
+    hspd = 0; // gdy juz bedziemy przy scianie, zatrzymaj sie
 }
+// cala ta czesc to zabezpieczenie przed pojawieniem sie wewnatrz sciany
+
+// poruszanie sie w poziomie
+x+=hspd;
 
 
-//interakcja z kołem do obracania
-var last_key=0;
 
+
+// kolizje ze scianami pionowo
+if (place_meeting(x, y+vspd, obj_wall)) //sprawdza, czy w kolejnym kroku w poziomie znajduje sie sciana
+{
+    while (!place_meeting(x, y+sign(vspd), obj_wall)) // sprawdza, czy dotykamy te sciane, sign zwraca wartosc 1 lub -1, w zaleznosci w ktora strone sie poruszamy, jezeli nie to...
+    {
+        y += sign(vspd); // poruszamy sie o ten jeden piksel w dana strone, az dotkniemy sciany
+    }
+    vspd = 0; // gdy juz bedziemy przy scianie, zatrzymaj sie
+}
+// cala ta czesc to zabezpieczenie przed pojawieniem sie wewnatrz sciany
+
+// poruszanie sie w pionie
+y += vspd;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///interakcja z obj_wheel
 if (use_key_hold)
 {   
     with (instance_place(x, y, obj_wheel))
@@ -169,8 +214,61 @@ if (!last_key) or (!place_meeting(x,y,obj_wheel))
     with(obj_wheel)
         active=false;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// interakcja z obj_power
 
-//interakcja z panelem do poruszania obiektami
+with (instance_place(x, y, obj_power))
+{
+    draw_focus_outline(obj_power);
+    if (use_key) or (use_key2)
+    {
+    //if (place_meeting(x,y,obj_power))
+    //{
+        if (active) active=false;
+        else active=true; 
+    }    
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// interakcja z obj_movepanel
+
 if (use_key_hold)
 {   
     with (instance_place(x, y, obj_movepanel))
@@ -196,36 +294,6 @@ if (!last_key) or (!place_meeting(x,y,obj_movepanel))
     with(obj_movepanel)
         active=false;
 }
-
-
-// kolizje ze scianami poziomo (poziomo MUSI byc sprawdzane przed pionem!!!)
-if (place_meeting(x+hspd, y, obj_wall))
-{
-    while (!place_meeting(x+sign(hspd), y, obj_wall)) // sprawdza, czy dotykamy te sciane, sign zwraca wartosc 1 lub -1, w zaleznosci w ktora strone sie poruszamy, jezeli nie to...
-    {
-        x += sign(hspd); // poruszamy sie o ten jeden piksel w dana strone, az dotkniemy sciany
-    }
-    hspd = 0; // gdy juz bedziemy przy scianie, zatrzymaj sie
-}
-// cala ta czesc to zabezpieczenie przed pojawieniem sie wewnatrz sciany
-
-// poruszanie sie w poziomie
-x+=hspd;
-
-
-// kolizje ze scianami pionowo
-if (place_meeting(x, y+vspd, obj_wall)) //sprawdza, czy w kolejnym kroku w poziomie znajduje sie sciana
-{
-    while (!place_meeting(x, y+sign(vspd), obj_wall)) // sprawdza, czy dotykamy te sciane, sign zwraca wartosc 1 lub -1, w zaleznosci w ktora strone sie poruszamy, jezeli nie to...
-    {
-        y += sign(vspd); // poruszamy sie o ten jeden piksel w dana strone, az dotkniemy sciany
-    }
-    vspd = 0; // gdy juz bedziemy przy scianie, zatrzymaj sie
-}
-// cala ta czesc to zabezpieczenie przed pojawieniem sie wewnatrz sciany
-
-// poruszanie sie w pionie
-y += vspd;
 </string>
           </argument>
         </arguments>
@@ -272,6 +340,14 @@ if (place_meeting(x, y, obj_movepanel))
 {
     inst = instance_place(x, y, obj_movepanel);
     draw_focus_outline(inst);
+}
+
+if (place_meeting(x, y, obj_door))
+{
+
+    inst = instance_place(x, y, obj_door);
+    if (inst.opened)
+       draw_focus_outline(inst);
 }
 
 draw_self();
