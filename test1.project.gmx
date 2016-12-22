@@ -56,8 +56,8 @@
   <objects name="objects">
     <object>objects\obj_player</object>
     <objects name="game">
-      <object>objects\obj_pause</object>
       <object>objects\obj_master</object>
+      <object>objects\obj_pause</object>
       <object>objects\draw_paths</object>
       <object>objects\obj_menu</object>
       <object>objects\obj_menu_lvl</object>

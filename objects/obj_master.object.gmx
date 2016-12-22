@@ -55,6 +55,8 @@ global.names[1] = "Poziom 2";
             <kind>1</kind>
             <string>draw_set_font(-1);
 draw_text(10, 10, "FPS = " + string(fps));  // wyswietl licznik fps
+
+// wyswietl nazwe planszy
 </string>
           </argument>
         </arguments>

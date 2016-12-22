@@ -349,7 +349,11 @@ with (instance_place(x, y, obj_door))
 {
     if (use_key) or (use_key2)
     {
-        if (opened) show_debug_message("Level completed");
+        if (opened) 
+        {
+            show_debug_message("Level completed");
+            instance_create(0,0,obj_level_complete);
+        }
     }    
 }
 </string>
