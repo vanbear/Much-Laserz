@@ -33,6 +33,11 @@
       <sprite>sprites\mirror_test</sprite>
       <sprite>sprites\spr_mirrorRect</sprite>
     </sprites>
+    <sprites name="splitters">
+      <sprite>sprites\spr_splitter_NE_SE</sprite>
+      <sprite>sprites\spr_splitter_N_S</sprite>
+      <sprite>sprites\spr_splitter_ALL</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -48,6 +53,16 @@
     <scripts name="menu">
       <script>scripts\scr_level_select.gml</script>
       <script>scripts\scr_menu.gml</script>
+    </scripts>
+    <scripts name="splitter">
+      <script>scripts\scr_splitter_W.gml</script>
+      <script>scripts\scr_splitter_S.gml</script>
+      <script>scripts\scr_splitter_N.gml</script>
+      <script>scripts\scr_splitter_E.gml</script>
+      <script>scripts\scr_splitter_NE.gml</script>
+      <script>scripts\scr_splitter_SE.gml</script>
+      <script>scripts\scr_splitter_SW.gml</script>
+      <script>scripts\scr_splitter_NW.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -79,8 +94,15 @@
       <object>objects\obj_door</object>
       <object>objects\obj_wall</object>
     </objects>
+    <objects name="splitters">
+      <object>objects\par_splitter</object>
+      <object>objects\obj_splitter_NE_SE</object>
+      <object>objects\obj_splitter_N_S</object>
+      <object>objects\obj_splitter_ALL</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\TEST</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_level_select</room>
     <room>rooms\rm_level_1</room>
