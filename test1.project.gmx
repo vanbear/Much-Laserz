@@ -7,7 +7,6 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
-    <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_emitter</sprite>
     <sprites name="sensor">
       <sprite>sprites\spr_sensor_active</sprite>
@@ -35,13 +34,21 @@
     </sprites>
     <sprites name="splitters">
       <sprite>sprites\spr_splitter_NE_SE</sprite>
+      <sprite>sprites\spr_splitter_NE_SW</sprite>
       <sprite>sprites\spr_splitter_N_S</sprite>
+      <sprite>sprites\spr_splitter_W_E</sprite>
       <sprite>sprites\spr_splitter_ALL</sprite>
+    </sprites>
+    <sprites name="walls">
+      <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_moving_platform</sprite>
+      <sprite>sprites\spr_platform</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
     <path>paths\pth_2_1</path>
+    <path>paths\pth_platform_test</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\collision_normal.gml</script>
@@ -93,16 +100,21 @@
     <objects name="environment">
       <object>objects\obj_door</object>
       <object>objects\obj_wall</object>
+      <object>objects\obj_platform</object>
+      <object>objects\obj_movingplatform</object>
     </objects>
     <objects name="splitters">
       <object>objects\par_splitter</object>
       <object>objects\obj_splitter_NE_SE</object>
+      <object>objects\obj_splitter_NE_SW</object>
       <object>objects\obj_splitter_N_S</object>
+      <object>objects\obj_splitter_W_E</object>
       <object>objects\obj_splitter_ALL</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\TEST</room>
+    <room>rooms\PLATFORM_TEST</room>
+    <room>rooms\SPLITTER_TEST</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_level_select</room>
     <room>rooms\rm_level_1</room>

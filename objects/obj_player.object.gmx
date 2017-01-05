@@ -33,8 +33,12 @@ hspd = 0; // predkosc pozioma
 vspd = 0; // predkosc pionowa
 max_vertical_speed = 15;
 frict = 2;
+hspd_carry = 0;
+vspd_carry = 0;
 
 gamepad_set_axis_deadzone(0,0.4);
+
+down_key = 0;
 </string>
           </argument>
         </arguments>
@@ -96,6 +100,8 @@ if esc_key
 
     var right_key = keyboard_check(ord('D')) || (gamepad_axis_value(0,gp_axislh) &gt; 0);                   //klaiwsz poruszsania sie w prawo
     var left_key = keyboard_check(ord('A')) || (gamepad_axis_value(0,gp_axislh) &lt; 0);                    //klaiwsz poruszsania sie w lewo
+    down_key = keyboard_check(ord('S')) || (gamepad_axis_value(0,gp_axislv) &lt; 0);                    //klaiwsz w dol
+    
     var jump_key = keyboard_check_pressed(ord('W')) || (gamepad_button_check_pressed(0,gp_face1));       //klaiwsz skoku
     var dash_key = keyboard_check(vk_shift) || (gamepad_button_value(0,gp_shoulderrb)&gt;0.2);              //klawisz sprintu
     
@@ -111,7 +117,7 @@ if esc_key
 // kolizja z podłożem
 if (place_meeting(x, y+1, obj_wall))  //co sie dzieje, gdy pod graczem jest podloze
 {
-    vspd = 0; // predkosc pionowa rowna zeru, gracz nie porusza sie pionowo
+    //vspd = 0; // predkosc pionowa rowna zeru, gracz nie porusza sie pionowo
     
     // skok
     if (jump_key)
