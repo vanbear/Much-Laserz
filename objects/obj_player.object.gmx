@@ -33,8 +33,8 @@ hspd = 0; // predkosc pozioma
 vspd = 0; // predkosc pionowa
 max_vertical_speed = 15;
 frict = 2;
-hspd_carry = 0;
-vspd_carry = 0;
+hsp_carry = 0;
+vsp_carry = 0;
 
 gamepad_set_axis_deadzone(0,0.4);
 
@@ -174,19 +174,22 @@ if ((!right_key &amp;&amp; !left_key) || (right_key &amp;&amp; left_key))  // gd
 
 
 
+var hsp_final = hspd + hsp_carry;
+hsp_carry = 0;
 // kolizje ze scianami poziomo (poziomo MUSI byc sprawdzane przed pionem!!!)
-if (place_meeting(x+hspd, y, obj_wall))
+if (place_meeting(x+hsp_final, y, obj_wall))
 {
-    while (!place_meeting(x+sign(hspd), y, obj_wall)) // sprawdza, czy dotykamy te sciane, sign zwraca wartosc 1 lub -1, w zaleznosci w ktora strone sie poruszamy, jezeli nie to...
+    while (!place_meeting(x+sign(hsp_final), y, obj_wall)) // sprawdza, czy dotykamy te sciane, sign zwraca wartosc 1 lub -1, w zaleznosci w ktora strone sie poruszamy, jezeli nie to...
     {
-        x += sign(hspd); // poruszamy sie o ten jeden piksel w dana strone, az dotkniemy sciany
+        x += sign(hsp_final); // poruszamy sie o ten jeden piksel w dana strone, az dotkniemy sciany
     }
-    hspd = 0; // gdy juz bedziemy przy scianie, zatrzymaj sie
+    hspd = 0;
+    hsp_final = 0; // gdy juz bedziemy przy scianie, zatrzymaj sie
 }
 // cala ta czesc to zabezpieczenie przed pojawieniem sie wewnatrz sciany
 
 // poruszanie sie w poziomie
-x+=hspd;
+x+=hsp_final;
 
 
 

@@ -25,12 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0]=2;
-sprite_index = -1;
+            <string>sprite_index = -1;
 
-pthname = -1;
-active = false;
-pthspd = 1;
+dir = -1;
+movespeed = 3;
+hspd = 0;
+vspd = 0;
 
 
 </string>
@@ -38,31 +38,7 @@ pthspd = 1;
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (pthname)
-   path_start(pthname,pthspd,path_action_reverse,true);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="2">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -80,6 +56,18 @@ pthspd = 1;
           <argument>
             <kind>1</kind>
             <string>mask_index = spr_moving_platform;
+hsp = dir * movespeed;
+
+if (place_meeting(x+hsp,y,obj_wall))
+{
+    while (!place_meeting(x+sign(hsp),y,obj_wall))
+    {
+        x += sign(hsp);
+    }
+    hsp = 0;
+    dir *= -1;
+}
+x += hsp;
 
 if instance_exists(obj_player)
 {
@@ -90,12 +78,10 @@ if instance_exists(obj_player)
     else
     {
         mask_index = spr_moving_platform;
-        var xx = x-xprevious, yy = y-yprevious;
-        if yy == 0
-            if place_meeting(x,y-2,obj_player)
-            {
-                obj_player.x += xx;
-            }
+        if place_meeting(x,y-2,obj_player)
+        {
+            obj_player.hsp_carry = hsp;
+        }
     }
 }
 </string>

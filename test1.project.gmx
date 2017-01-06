@@ -48,7 +48,6 @@
   <backgrounds name="background"/>
   <paths name="paths">
     <path>paths\pth_2_1</path>
-    <path>paths\pth_platform_test</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\collision_normal.gml</script>
