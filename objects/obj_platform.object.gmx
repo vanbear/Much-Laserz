@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>sprite_index = -1;
+y=y+1;
 </string>
           </argument>
         </arguments>
@@ -50,7 +51,7 @@
             <kind>1</kind>
             <string>if instance_exists(obj_player)
 {
-    if (round(obj_player.y + (obj_player.sprite_height/2) &gt; y)) || (obj_player.down_key)
+    if (round(obj_player.y + 24 &gt; y)) || (obj_player.down_key)
     {
         mask_index = -1;
     }

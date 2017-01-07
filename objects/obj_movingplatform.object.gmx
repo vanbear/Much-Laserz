@@ -32,7 +32,7 @@ movespeed = 3;
 hspd = 0;
 vspd = 0;
 
-
+y=y+1;
 </string>
           </argument>
         </arguments>
@@ -71,14 +71,14 @@ x += hsp;
 
 if instance_exists(obj_player)
 {
-    if (round(obj_player.y + (obj_player.sprite_height/2) &gt; y)) || (obj_player.down_key)
+    if (round(obj_player.y + 24 &gt; y)) || (obj_player.down_key)
     {
         mask_index = -1;
     }
     else
     {
         mask_index = spr_moving_platform;
-        if place_meeting(x,y-2,obj_player)
+        if place_meeting(x,y-1,obj_player)
         {
             obj_player.hsp_carry = hsp;
         }
