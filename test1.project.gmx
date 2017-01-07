@@ -7,7 +7,6 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
-    <sprite>sprites\spr_emitter</sprite>
     <sprites name="sensor">
       <sprite>sprites\spr_sensor_active</sprite>
       <sprite>sprites\spr_sensor_unactive</sprite>
@@ -49,6 +48,10 @@
       <sprite>sprites\spr_player_blink</sprite>
       <sprite>sprites\spr_player_jump</sprite>
       <sprite>sprites\spr_player_run</sprite>
+    </sprites>
+    <sprites name="emitter">
+      <sprite>sprites\spr_emitter_active</sprite>
+      <sprite>sprites\spr_emitter</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -118,9 +121,9 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_menu</room>
     <room>rooms\PLATFORM_TEST</room>
     <room>rooms\SPLITTER_TEST</room>
-    <room>rooms\rm_menu</room>
     <room>rooms\rm_level_select</room>
     <room>rooms\rm_level_1</room>
     <room>rooms\rm_level_2</room>

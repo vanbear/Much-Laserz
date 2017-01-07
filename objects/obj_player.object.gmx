@@ -127,6 +127,7 @@ if esc_key
     down_key = keyboard_check(ord('S')) || (gamepad_axis_value(0,gp_axislv) &lt; 0);                    //klaiwsz w dol
     
     var jump_key = keyboard_check_pressed(ord('W')) || (gamepad_button_check_pressed(0,gp_face1));       //klaiwsz skoku
+    var jump_key_hold = keyboard_check(ord('W')) || (gamepad_button_check(0,gp_face1));
     
     var use_key = keyboard_check_pressed(ord('E')) || (gamepad_button_check_pressed(0,gp_face2));        //klawisze interakcji 1
     var use_key_hold = keyboard_check(ord('E')) || (gamepad_button_check(0,gp_face2));
@@ -155,6 +156,10 @@ else // co sie dzieje, kiedy jestesmy w powietrzu
     { // jezeli predkosc pionowa mniejsza od 10, jezeli jest rowna 10, nie dodajemy juz predkosci
         vspd += grav;   // zwiekszaj predkosc spadania o wartosc grawitacji
     }
+}
+if (vspd &lt; 0 &amp;&amp; !jump_key_hold)
+{
+    vspd = max(vspd,-jump_speed/4);
 }
 
 
@@ -385,6 +390,8 @@ with (instance_place(x, y, obj_door))
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -406,6 +413,9 @@ randomize();
 
 image_speed = 0.1;
 
+var blink_length = 5;
+var blink_current = 0;
+
 if hspd!=0 image_xscale = sign(hspd);
 
 if (place_meeting(x,y+1,obj_wall))
@@ -413,12 +423,9 @@ if (place_meeting(x,y+1,obj_wall))
     if (hspd!=0) sprite_index = spr_player_run;
     else 
     {
-        n = random(100);
-        if n &gt; 99 
-        {
-            sprite_index = spr_player_blink;
-        }
-        else sprite_index = spr_player_idle; 
+    // idle
+       sprite_index = spr_player_idle; 
+    // idle - end
     }
 }
 
@@ -427,8 +434,6 @@ if (vspd != 0) sprite_index = spr_player_jump;
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>

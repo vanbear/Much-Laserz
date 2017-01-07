@@ -63,7 +63,10 @@ if (active) {
     xx = x
     yy = y
     init_laser(3000,3,c_red)
+    sprite_index = spr_emitter_active;
 }
+else
+sprite_index = spr_emitter;
 
 draw_self();
 </string>
