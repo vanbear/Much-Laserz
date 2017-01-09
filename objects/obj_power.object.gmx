@@ -27,6 +27,30 @@
             <kind>1</kind>
             <string>ident=-1;
 active=false;
+previous_state = active;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>previous_state = active; // zmien status
 </string>
           </argument>
         </arguments>
@@ -67,6 +91,13 @@ with (obj_emitter)
         else 
             active=false;
     }
+}
+
+if (active != previous_state) 
+{
+    if (active) audio_sound_pitch(snd_beep, 1);
+    else audio_sound_pitch(snd_beep, .9);
+    audio_play_sound(snd_beep,10,0); // przy zmianie stanu odtworz dzwiek   
 }
 </string>
           </argument>

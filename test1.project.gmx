@@ -4,7 +4,19 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sounds name="sfx">
+      <sound>sound\snd_player_landing</sound>
+      <sound>sound\snd_door</sound>
+      <sound>sound\snd_moving</sound>
+      <sound>sound\snd_beep</sound>
+    </sounds>
+    <sounds name="music">
+      <sound>sound\music_underclocked</sound>
+      <sound>sound\music_allofus</sound>
+      <sound>sound\music_searching</sound>
+    </sounds>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
     <sprites name="sensor">
@@ -25,7 +37,8 @@
     </sprites>
     <sprites name="move_panel">
       <sprite>sprites\spr_movepanel_off</sprite>
-      <sprite>sprites\spr_movepanel_on</sprite>
+      <sprite>sprites\spr_movepanel_left</sprite>
+      <sprite>sprites\spr_movepanel_right</sprite>
     </sprites>
     <sprites name="mirrors">
       <sprite>sprites\mirror_test</sprite>
@@ -92,6 +105,7 @@
       <object>objects\obj_menu</object>
       <object>objects\obj_menu_lvl</object>
       <object>objects\obj_level_complete</object>
+      <object>objects\obj_music_emitter</object>
     </objects>
     <objects name="panels">
       <object>objects\obj_power</object>

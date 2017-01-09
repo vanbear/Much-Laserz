@@ -28,6 +28,30 @@
             <string>/// deklaracja zmiennych
 ident=-1;
 opened = false;
+previous_state = opened; // do  odtwarzania dźwieku
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>previous_state = opened; // zmien status
 </string>
           </argument>
         </arguments>
@@ -65,7 +89,10 @@ if is_array(ident)      // czy przypisana jest wieksza liczba sensorow do jednyc
                   n += 1;
         }
     }
-    if n==array_length_1d(ident) opened=true;
+    if n==array_length_1d(ident) 
+    {
+        opened=true;
+    }
     else opened=false;
     
 }
@@ -107,6 +134,9 @@ else
 {
     sprite_index=spr_door_open; 
 }
+
+
+if (opened != previous_state) audio_play_sound(snd_door,0,0); // przy zmianie stanu odtworz dzwiek
 </string>
           </argument>
         </arguments>

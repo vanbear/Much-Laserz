@@ -121,7 +121,7 @@ if (!active)
 } 
 else
 {
-    sprite_index=spr_movepanel_on; 
+    if dir sprite_index=spr_movepanel_left; else  sprite_index=spr_movepanel_right;
     
     // przesuwanie emittera
     with (obj_emitter)
@@ -149,6 +149,12 @@ else
         
     }
     
+}
+
+if active 
+{
+    var snd = audio_play_sound(snd_moving,10,0);
+    audio_sound_gain(snd, .1,1);
 }
 </string>
           </argument>
