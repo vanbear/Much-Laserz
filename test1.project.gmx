@@ -14,7 +14,6 @@
     <sounds name="music">
       <sound>sound\music_underclocked</sound>
       <sound>sound\music_allofus</sound>
-      <sound>sound\music_searching</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -23,8 +22,8 @@
       <sprite>sprites\spr_sensor_unactive</sprite>
     </sprites>
     <sprites name="doors">
-      <sprite>sprites\spr_door_open</sprite>
       <sprite>sprites\spr_door_closed</sprite>
+      <sprite>sprites\spr_door_open</sprite>
     </sprites>
     <sprites name="power_panel">
       <sprite>sprites\spr_power_off</sprite>
@@ -75,9 +74,20 @@
       <sprite>sprites\spr_logo</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_environment</background>
+  </backgrounds>
   <paths name="paths">
-    <path>paths\pth_2_1</path>
+    <paths name="Level 2">
+      <path>paths\pth_2_1</path>
+    </paths>
+    <paths name="Level 3">
+      <path>paths\pth_lvl3_emitter</path>
+      <path>paths\pth_lvl3_mirror1</path>
+      <path>paths\pth_lvl3_mirror2</path>
+      <path>paths\pth_lvl3_mirror3</path>
+      <path>paths\pth_lvl3_mirror4</path>
+    </paths>
   </paths>
   <scripts name="scripts">
     <script>scripts\collision_normal.gml</script>
@@ -152,8 +162,10 @@
       <room>rooms\PLATFORM_TEST</room>
     </rooms>
     <rooms name="levels">
-      <room>rooms\rm_level_2</room>
       <room>rooms\rm_level_1</room>
+      <room>rooms\rm_level_2</room>
+      <room>rooms\rm_level_3</room>
+      <room>rooms\rm_level_4</room>
     </rooms>
   </rooms>
   <help>

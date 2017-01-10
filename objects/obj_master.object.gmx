@@ -28,17 +28,14 @@
             <string>/// lista poziomow
 global.levels[0] = rm_level_1;
 global.levels[1] = rm_level_2;
-global.levels[2] = rm_level_1;
-global.levels[3] = rm_level_2;
-global.levels[4] = rm_level_1;
-global.levels[5] = rm_level_2;
+global.levels[2] = rm_level_3;
+global.levels[3] = rm_level_4;
 
 global.names[0] = "Poziom 1";
 global.names[1] = "Poziom 2";
 global.names[2] = "Poziom 3";
 global.names[3] = "Poziom 4";
-global.names[4] = "Poziom 5";
-global.names[5] = "Poziom 6";
+
 </string>
           </argument>
         </arguments>
