@@ -43,6 +43,7 @@ with(all)
 surface_reset_target();
 
 instance_deactivate_all(true);
+instance_activate_object(obj_music_emitter);
 visible=true;
 </string>
           </argument>
@@ -66,8 +67,8 @@ visible=true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var menu_key = keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0,gp_select);
-var next_key = keyboard_check_pressed(vk_enter) || gamepad_button_check_pressed(0,gp_start);
+            <string>var menu_key = keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0,gp_face2);
+var next_key = keyboard_check_pressed(vk_enter) || gamepad_button_check_pressed(0,gp_face1);
 
 if menu_key
 {
@@ -112,12 +113,31 @@ if next_key
             <string>draw_set_color(c_white);
 draw_set_halign(fa_center);
 draw_set_valign(fa_center);
-draw_set_font(fnt_menu);
-draw_text(view_wview[0]/2,view_hview[0]/2,"Gratulacje!");
-draw_set_font(-1);
+draw_set_font(fnt_arcade);
 
-draw_set_halign(fa_left);
-draw_set_valign(fa_top);
+var xx = view_wview[0]/2;
+var yy =view_hview[0]/2
+
+draw_text(xx,yy,"Gratulacje!");
+
+// ======================
+var str2 = " / Enter - Nastepny poziom";
+var yy2 = yy+string_height("a")+sprite_get_height(spr_button_gpA);
+
+draw_sprite_ext( spr_button_gpA, 0, xx - string_width(str2)/5 - 10, yy2, .8, .8, 0, c_white, 1);
+draw_text_transformed( xx + sprite_get_width(spr_button_gpA), yy2 , str2, .5, .5, 0);
+
+// ====================== 
+var str3 = " / ESC - Powrot do menu";
+var yy3 = yy2+string_height("a")+sprite_get_height(spr_button_gpB);
+
+draw_sprite_ext( spr_button_gpB, 0, xx - string_width(str3)/5 - 10, yy3, .8, .8, 0, c_white, 1);
+draw_text_transformed( xx + sprite_get_width(spr_button_gpB), yy3 , str3, .5, .5, 0);
+
+// ====================== default values
+draw_set_font(-1);
+draw_set_halign(-1);
+draw_set_valign(-1);
 </string>
           </argument>
         </arguments>

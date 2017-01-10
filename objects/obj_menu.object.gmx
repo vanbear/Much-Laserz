@@ -31,6 +31,7 @@ menu[2] = "Wyjscie";
 
 space = 64;
 mpos = 0;
+x = view_wview[0]/2 - string_width(menu[2])
 
 gamepad_set_axis_deadzone(0,0.4);
 </string>
@@ -55,10 +56,10 @@ gamepad_set_axis_deadzone(0,0.4);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var move_up = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")) ||  gamepad_button_check_pressed(0,gp_padu);
-var move_down = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")) || gamepad_button_check_pressed(0,gp_padd);
+            <string>var move_up = keyboard_check_pressed(vk_up) ||   gamepad_button_check_pressed(0,gp_padu);
+var move_down = keyboard_check_pressed(vk_down) ||  gamepad_button_check_pressed(0,gp_padd);
 
-var select_key = keyboard_check_pressed(vk_enter) || keyboard_check_pressed(ord("E")) || gamepad_button_check_pressed(0,gp_face1) || gamepad_button_check_pressed(0,gp_start);
+var select_key = keyboard_check_pressed(vk_enter) ||  gamepad_button_check_pressed(0,gp_face1) || gamepad_button_check_pressed(0,gp_start);
 
 var move = 0;
 
@@ -105,17 +106,26 @@ if (push == 1) scr_menu();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_halign(fa_left);
+            <string>draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_set_font(fnt_menu);
+draw_set_font(fnt_arcade);
 draw_set_color(c_white);
 
 
 for (var m = 0; m &lt; array_length_1d(menu); m ++)
 {
-    draw_text(x+space, y+(m*space), string(menu[m]));
+    if (m != mpos)
+       draw_text(x+space, y+(m*space), string(menu[m]));
+    else
+        draw_text(x+space, y+(m*space), string("&gt; "+menu[m]+" &lt;"));
 }
-draw_sprite(sprite_index, 0, x + 16, y + mpos * space);
+
+draw_sprite(spr_logo, 0, view_wview[0]/2, y-sprite_get_height(spr_logo));
+
+
+//draw_sprite(sprite_index, 0, x, y + mpos * space);
+
+draw_set_halign(fa_left);
 </string>
           </argument>
         </arguments>

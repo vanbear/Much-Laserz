@@ -77,7 +77,7 @@ active = false;
             <kind>1</kind>
             <string>/// state change
 
-
+image_speed = .2;
 if (!active)
 {
     sprite_index=spr_sensor_unactive;  

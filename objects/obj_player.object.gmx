@@ -148,18 +148,18 @@ if esc_key
 
 // przypisanie klawiszy do zmiennych
 
-    var right_key = keyboard_check(ord('D')) || (gamepad_axis_value(0,gp_axislh) &gt; 0);                   //klaiwsz poruszsania sie w prawo
-    var left_key = keyboard_check(ord('A')) || (gamepad_axis_value(0,gp_axislh) &lt; 0);                    //klaiwsz poruszsania sie w lewo
-    down_key = keyboard_check(ord('S')) || (gamepad_axis_value(0,gp_axislv) &lt; 0);                    //klaiwsz w dol
+    var right_key = keyboard_check(vk_right) || (gamepad_axis_value(0,gp_axislh) &gt; 0);                   //klaiwsz poruszsania sie w prawo
+    var left_key = keyboard_check(vk_left) || (gamepad_axis_value(0,gp_axislh) &lt; 0);                    //klaiwsz poruszsania sie w lewo
+    down_key = keyboard_check(vk_down) || (gamepad_axis_value(0,gp_axislv) &lt; 0);                    //klaiwsz w dol
     
-    var jump_key = keyboard_check_pressed(ord('W')) || (gamepad_button_check_pressed(0,gp_face1));       //klaiwsz skoku
-    var jump_key_hold = keyboard_check(ord('W')) || (gamepad_button_check(0,gp_face1));
+    var jump_key = keyboard_check_pressed(vk_up) || (gamepad_button_check_pressed(0,gp_face1));       //klaiwsz skoku
+    var jump_key_hold = keyboard_check(vk_up) || (gamepad_button_check(0,gp_face1));
     
-    var use_key = keyboard_check_pressed(ord('E')) || (gamepad_button_check_pressed(0,gp_face2));        //klawisze interakcji 1
-    var use_key_hold = keyboard_check(ord('E')) || (gamepad_button_check(0,gp_face2));
+    var use_key = keyboard_check_pressed(ord('X')) || (gamepad_button_check_pressed(0,gp_face2));        //klawisze interakcji 1
+    var use_key_hold = keyboard_check(ord('X')) || (gamepad_button_check(0,gp_face2));
     
-    var use_key2 = keyboard_check_pressed(ord('Q')) || (gamepad_button_check_pressed(0,gp_face3));       //klawisze interakcji 2
-    var use_key_hold2 = keyboard_check(ord('Q')) || (gamepad_button_check(0,gp_face3));
+    var use_key2 = keyboard_check_pressed(ord('Z')) || (gamepad_button_check_pressed(0,gp_face3));       //klawisze interakcji 2
+    var use_key_hold2 = keyboard_check(ord('Z')) || (gamepad_button_check(0,gp_face3));
 
     var last_key=0;
 

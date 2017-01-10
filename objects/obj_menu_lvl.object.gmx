@@ -54,7 +54,7 @@ gamepad_set_axis_deadzone(0,0.4);
             <string>var move_up = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")) ||  gamepad_button_check_pressed(0,gp_padu);
 var move_down = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")) || gamepad_button_check_pressed(0,gp_padd);
 
-var select_key = keyboard_check_pressed(vk_enter) || keyboard_check_pressed(ord("E")) || gamepad_button_check_pressed(0,gp_face1) || gamepad_button_check_pressed(0,gp_start);
+var select_key = keyboard_check_pressed(vk_enter) ||  gamepad_button_check_pressed(0,gp_face1) || gamepad_button_check_pressed(0,gp_start);
 var back_key = keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0,gp_face2);
 
 var move = 0;
@@ -86,6 +86,28 @@ if back_key room_goto(rm_menu);
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// zmiana połozenia wzgledem wybranego poziomu
+y = view_hview/2 - mpos*space;
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="8" enumb="0">
       <action>
@@ -104,17 +126,31 @@ if back_key room_goto(rm_menu);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_halign(fa_left);
+            <string>draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_set_font(fnt_menu);
+draw_set_font(fnt_arcade);
 draw_set_color(c_white);
 
+x = view_wview[0]/2 - string_width(global.names[0])/2
 
 for (var m = 0; m &lt; array_length_1d(global.levels); m ++)
 {
-    draw_text(x+space, y+(m*space), string(global.names[m]));
+    if (m == mpos) draw_set_color(c_white);
+    if (m == mpos-1 || m == mpos+1) draw_set_color(c_gray);
+    if (m &lt;= mpos-2 || m &gt;= mpos+2) draw_set_color(c_dkgray);
+
+    // wyswietlanie nazw
+    if (m != mpos)
+       draw_text(x+space, y+(m*space), string(global.names[m]));
+    // rysowanie strzalek
+    else
+        draw_text(x+space, y+(m*space), string("&gt; "+global.names[m]+" &lt;"));
 }
-draw_sprite(sprite_index, 0, x + 16, y + mpos * space);
+//draw_sprite(sprite_index, 0, x + 16, y + mpos * space);
+
+// przywracanie domyslnego formatowania
+draw_set_halign(-1);
+draw_set_color(-1);
 </string>
           </argument>
         </arguments>

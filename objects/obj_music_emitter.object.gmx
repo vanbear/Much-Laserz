@@ -25,18 +25,24 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>music[0] = music_underclocked;
-music[1] = music_allofus;
-music[2] = music_searching;
+            <string>/*
+//test
+music[0] = snd_beep;
+music[1] = snd_door;
+music[2] = snd_player_landing;
+*/
 
 randomize();
-n = irandom_range(0,array_length_1d(music)-1);
+music[0] = music_underclocked;
+music[1] = music_allofus;
+
+n = 0;
+last_n = n;
+
+
 snd = audio_play_sound(music[n],0,0);
 audio_sound_gain(snd, .5,1);
-
-len = audio_sound_length(snd);
-last_n = n;
-alarm[0] = len * room_speed;
+show_debug_message("Music playing: " + audio_get_name(music[n]) );
 
 </string>
           </argument>
@@ -66,7 +72,7 @@ alarm[0] = len * room_speed;
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -85,17 +91,20 @@ alarm[0] = len * room_speed;
             <kind>1</kind>
             <string>/// odtwarzanie muzyki po zakonczeniu poprzedniej
 // zapobiega puszczeniu tego samego dźwieku drugi raz z rzedu
-while (last_n==n)
-   n = irandom_range(0,array_length_1d(music)-1);
-   
-snd = audio_play_sound(music[n],0,0);
-audio_sound_gain(snd, .5,1);
 
-len = audio_sound_length(snd);
-last_n = n;
-alarm[0] = len * room_speed;
+if (!audio_is_playing(snd))
+{
+    while (last_n==n)
+       n = irandom_range(0,array_length_1d(music)-1);
+
+       
+    snd = audio_play_sound(music[n],0,0);
+    audio_sound_gain(snd, .5,1);
+    show_debug_message("Music playing: " + audio_get_name(music[n]) );
     
-
+    last_n = n;
+}
+    
 </string>
           </argument>
         </arguments>
