@@ -59,13 +59,13 @@
     <instance objName="obj_movepanel" x="192" y="480" name="inst_51E47B83" locked="0" code="ident = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_movepanel" x="800" y="480" name="inst_F7A6E17F" locked="0" code="ident = 4;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_movepanel" x="736" y="480" name="inst_AAE91542" locked="0" code="ident = 3;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_movepanel" x="608" y="480" name="inst_5888D4F6" locked="0" code="ident = 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_movepanel" x="672" y="480" name="inst_5888D4F6" locked="0" code="ident = 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="256" y="480" name="inst_6AE2A972" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mirrortest" x="800" y="352" name="inst_B6B85A79" locked="0" code="ident = 4;&#xA;pthname = pth_lvl3_mirror4;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="45"/>
     <instance objName="obj_mirrortest" x="768" y="416" name="inst_447C570C" locked="0" code="ident = 3;&#xA;pthname = pth_lvl3_mirror3;" scaleX="1" scaleY="1" colour="4294967295" rotation="135"/>
     <instance objName="obj_mirrortest" x="480" y="288" name="inst_8BD4A80C" locked="0" code="ident = 1;&#xA;pthname = pth_lvl3_mirror1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="45"/>
-    <instance objName="obj_mirrortest" x="512" y="416" name="inst_D6C25211" locked="0" code="ident = 2;&#xA;pthname = pth_lvl3_mirror2;&#xA;path_position = .9;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="45"/>
-    <instance objName="obj_movepanel" x="480" y="480" name="inst_BCF187BD" locked="0" code="ident = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mirrortest" x="512" y="416" name="inst_D6C25211" locked="0" code="ident = 2;&#xA;pthname = pth_lvl3_mirror2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="45"/>
+    <instance objName="obj_movepanel" x="608" y="480" name="inst_BCF187BD" locked="0" code="ident = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sensor" x="320" y="256" name="inst_EB0A5BD6" locked="0" code="ident = 5;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="256" y="224" name="inst_0B1D466E" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="288" y="288" name="inst_28F0D3B6" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>

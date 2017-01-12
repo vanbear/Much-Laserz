@@ -36,6 +36,9 @@ global.names[1] = "Poziom 2";
 global.names[2] = "Poziom 3";
 global.names[3] = "Poziom 4";
 
+
+//
+audio_master_gain(.3);
 </string>
           </argument>
         </arguments>
@@ -59,9 +62,10 @@ global.names[3] = "Poziom 4";
           <argument>
             <kind>1</kind>
             <string>draw_set_font(-1);
+draw_set_color(c_white);
 draw_text(10, 10, "FPS = " + string(fps));  // wyswietl licznik fps
 
-// wyswietl nazwe planszy
+draw_set_color(-1);
 </string>
           </argument>
         </arguments>

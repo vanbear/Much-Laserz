@@ -88,7 +88,8 @@ last_vspd = vspd; // ostatnia wartos predkosci pionowej
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>last_vspd = vspd;
+            <string>/// last_vspd
+last_vspd = vspd;
 </string>
           </argument>
         </arguments>
@@ -150,7 +151,7 @@ if esc_key
 
     var right_key = keyboard_check(vk_right) || (gamepad_axis_value(0,gp_axislh) &gt; 0);                   //klaiwsz poruszsania sie w prawo
     var left_key = keyboard_check(vk_left) || (gamepad_axis_value(0,gp_axislh) &lt; 0);                    //klaiwsz poruszsania sie w lewo
-    down_key = keyboard_check(vk_down) || (gamepad_axis_value(0,gp_axislv) &lt; 0);                    //klaiwsz w dol
+    down_key = keyboard_check(vk_down) || (gamepad_axis_value(0,gp_axislv) &gt; 0);                    //klaiwsz w dol
     
     var jump_key = keyboard_check_pressed(vk_up) || (gamepad_button_check_pressed(0,gp_face1));       //klaiwsz skoku
     var jump_key_hold = keyboard_check(vk_up) || (gamepad_button_check(0,gp_face1));
@@ -434,7 +435,10 @@ with (instance_place(x, y, obj_door))
             <kind>1</kind>
             <string>/// dzwieki
 
-if (last_vspd &gt; 0 &amp;&amp; vspd == 0) audio_play_sound(snd_player_landing,0,0);
+if (last_vspd &gt; 0 &amp;&amp; vspd == 0) 
+{
+    audio_play_sound(snd_player_landing,0,0);
+}
 </string>
           </argument>
         </arguments>

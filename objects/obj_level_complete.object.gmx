@@ -121,18 +121,18 @@ var yy =view_hview[0]/2
 draw_text(xx,yy,"Gratulacje!");
 
 // ======================
-var str2 = " / Enter - Nastepny poziom";
+var str2 = " /Enter - Nastepny poziom";
 var yy2 = yy+string_height("a")+sprite_get_height(spr_button_gpA);
 
-draw_sprite_ext( spr_button_gpA, 0, xx - string_width(str2)/5 - 10, yy2, .8, .8, 0, c_white, 1);
-draw_text_transformed( xx + sprite_get_width(spr_button_gpA), yy2 , str2, .5, .5, 0);
+draw_sprite_ext( spr_button_gpA, 0, xx - string_width(str2)/2, yy2, 1, 1, 0, c_white, 1);
+draw_text_transformed( xx , yy2 , str2, 1, 1, 0);
 
 // ====================== 
-var str3 = " / ESC - Powrot do menu";
+var str3 = " /ESC - Powrot do menu";
 var yy3 = yy2+string_height("a")+sprite_get_height(spr_button_gpB);
 
-draw_sprite_ext( spr_button_gpB, 0, xx - string_width(str3)/5 - 10, yy3, .8, .8, 0, c_white, 1);
-draw_text_transformed( xx + sprite_get_width(spr_button_gpB), yy3 , str3, .5, .5, 0);
+draw_sprite_ext( spr_button_gpB, 0, xx - string_width(str3)/2, yy3, 1, 1, 0, c_white, 1);
+draw_text_transformed( xx , yy3 , str3, 1, 1, 0);
 
 // ====================== default values
 draw_set_font(-1);

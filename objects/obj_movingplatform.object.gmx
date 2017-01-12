@@ -107,6 +107,10 @@ if instance_exists(obj_player)
           <argument>
             <kind>1</kind>
             <string>draw_sprite(spr_moving_platform,0,x,y);
+if (dir == -1)
+   draw_sprite(spr_moving_platform_fire,0,x+28,y+6);
+else
+    draw_sprite_ext(spr_moving_platform_fire,0,x-28,y+6,-1,1,image_angle,c_white,1);
 </string>
           </argument>
         </arguments>

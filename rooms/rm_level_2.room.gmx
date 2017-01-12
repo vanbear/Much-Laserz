@@ -61,7 +61,7 @@
     <instance objName="obj_wall" x="224" y="160" name="inst_C99B4F70" locked="0" code="" scaleX="1" scaleY="14" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="768" y="160" name="inst_3E8FDF4B" locked="0" code="" scaleX="1" scaleY="14" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="256" y="256" name="inst_A5294AB3" locked="0" code="" scaleX="13" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wheel" x="575" y="526" name="inst_3C5CE6BA" locked="0" code="ident = 2;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wheel" x="576" y="544" name="inst_3C5CE6BA" locked="0" code="ident = 2;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="draw_paths" x="256" y="96" name="inst_DF79A99D" locked="0" code="paths[0]=pth_2_1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_emitter" x="288" y="224" name="inst_3B2A6AD1" locked="0" code="ident = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mirrortest" x="352" y="224" name="inst_90427F77" locked="0" code="pthname = pth_2_1;&#xA;ident = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="45"/>

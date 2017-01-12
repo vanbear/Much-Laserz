@@ -83,7 +83,10 @@ if (move != 0)
 var push;
 push = max(select_key,0);
 
-if (push == 1) scr_menu();
+if (push == 1) 
+{
+    scr_menu();
+}
 </string>
           </argument>
         </arguments>

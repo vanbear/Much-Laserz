@@ -59,7 +59,9 @@ if (!active)
 } 
 else
 {
-    sprite_index=spr_wheel_on; 
+    if dir sprite_index=spr_wheel_left; 
+    else sprite_index=spr_wheel_right; 
+    
     
     // obracanie emittera
     with (obj_emitter)

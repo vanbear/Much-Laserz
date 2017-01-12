@@ -31,7 +31,8 @@
     </sprites>
     <sprites name="wheel">
       <sprite>sprites\spr_wheel_off</sprite>
-      <sprite>sprites\spr_wheel_on</sprite>
+      <sprite>sprites\spr_wheel_left</sprite>
+      <sprite>sprites\spr_wheel_right</sprite>
     </sprites>
     <sprites name="move_panel">
       <sprite>sprites\spr_movepanel_off</sprite>
@@ -52,6 +53,7 @@
     <sprites name="walls">
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_moving_platform</sprite>
+      <sprite>sprites\spr_moving_platform_fire</sprite>
       <sprite>sprites\spr_platform</sprite>
     </sprites>
     <sprites name="player">
@@ -65,14 +67,26 @@
       <sprite>sprites\spr_emitter</sprite>
     </sprites>
     <sprites name="game">
-      <sprite>sprites\spr_button_gpA</sprite>
-      <sprite>sprites\spr_button_gpB</sprite>
-      <sprite>sprites\spr_button_gpX</sprite>
-      <sprite>sprites\spr_button_gpY</sprite>
-      <sprite>sprites\spr_button_gpSTART</sprite>
-      <sprite>sprites\spr_button_gpSELECT</sprite>
       <sprite>sprites\spr_logo</sprite>
+      <sprites name="tutorial">
+        <sprite>sprites\spr_tutorial_jump_buttons</sprite>
+        <sprite>sprites\spr_tutorial_use_buttons</sprite>
+        <sprite>sprites\spr_tutorial_jump_trigger</sprite>
+        <sprite>sprites\spr_tutorial_use_trigger</sprite>
+      </sprites>
+      <sprites name="buttons">
+        <sprite>sprites\spr_button_gpSELECT</sprite>
+        <sprite>sprites\spr_button_gpSTART</sprite>
+        <sprite>sprites\spr_button_gpA</sprite>
+        <sprite>sprites\spr_button_gpB</sprite>
+        <sprite>sprites\spr_button_gpX</sprite>
+        <sprite>sprites\spr_button_gpY</sprite>
+        <sprite>sprites\spr_button_Z</sprite>
+        <sprite>sprites\spr_button_UP</sprite>
+        <sprite>sprites\spr_button_X</sprite>
+      </sprites>
     </sprites>
+    <sprite>sprites\spr_splash_wons</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_environment</background>
@@ -120,10 +134,20 @@
       <object>objects\obj_master</object>
       <object>objects\obj_pause</object>
       <object>objects\draw_paths</object>
-      <object>objects\obj_menu</object>
-      <object>objects\obj_menu_lvl</object>
       <object>objects\obj_level_complete</object>
       <object>objects\obj_music_emitter</object>
+      <object>objects\obj_splash_wons</object>
+      <objects name="tutorial">
+        <object>objects\obj_tutorial_jump</object>
+        <object>objects\obj_tutorial_use</object>
+        <object>objects\obj_tutorial_use_trigger</object>
+        <object>objects\obj_tutorial_jump_trigger</object>
+      </objects>
+      <objects name="menu">
+        <object>objects\obj_menu_lvl</object>
+        <object>objects\obj_menu</object>
+        <object>objects\obj_about</object>
+      </objects>
     </objects>
     <objects name="panels">
       <object>objects\obj_power</object>
@@ -154,8 +178,10 @@
   </objects>
   <rooms name="rooms">
     <rooms name="menus">
+      <room>rooms\rm_splash</room>
       <room>rooms\rm_menu</room>
       <room>rooms\rm_level_select</room>
+      <room>rooms\rm_about</room>
     </rooms>
     <rooms name="test">
       <room>rooms\SPLITTER_TEST</room>

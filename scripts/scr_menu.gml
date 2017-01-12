@@ -8,7 +8,7 @@ switch(mpos)
  }
  case 1: 
  {
-    break;
+    room_goto(rm_about); break;
  }
  case 2: 
  {

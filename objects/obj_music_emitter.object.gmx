@@ -41,7 +41,7 @@ last_n = n;
 
 
 snd = audio_play_sound(music[n],0,0);
-audio_sound_gain(snd, .5,1);
+audio_sound_gain(snd, .2,1);
 show_debug_message("Music playing: " + audio_get_name(music[n]) );
 
 </string>
@@ -99,7 +99,7 @@ if (!audio_is_playing(snd))
 
        
     snd = audio_play_sound(music[n],0,0);
-    audio_sound_gain(snd, .5,1);
+    audio_sound_gain(snd, .2,1);
     show_debug_message("Music playing: " + audio_get_name(music[n]) );
     
     last_n = n;

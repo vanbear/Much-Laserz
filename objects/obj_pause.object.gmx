@@ -117,18 +117,18 @@ var yy =view_hview[0]/2
 draw_text(xx,yy,"Pauza");
 
 // ======================
-var str2 = " / ESC - Wznowienie gry";
+var str2 = " /ESC - Wznowienie gry";
 var yy2 = yy+string_height("a")+sprite_get_height(spr_button_gpSTART);
 
-draw_sprite_ext( spr_button_gpSTART, 0, xx - string_width(str2)/5 - 10, yy2, .8, .8, 0, c_white, 1);
-draw_text_transformed( xx + sprite_get_width(spr_button_gpSTART), yy2 , str2, .5, .5, 0);
+draw_sprite_ext( spr_button_gpSTART, 0, xx - string_width(str2)/2, yy2, 1, 1, 0, c_white, 1);
+draw_text_transformed( xx, yy2 , str2, 1, 1, 0);
 
 // ====================== 
-var str3 = " / P - Powrot do menu";
+var str3 = " /P - Powrot do menu";
 var yy3 = yy2+string_height("a")+sprite_get_height(spr_button_gpSELECT);
 
-draw_sprite_ext( spr_button_gpSELECT, 0, xx - string_width(str3)/5 - 10, yy3, .8, .8, 0, c_white, 1);
-draw_text_transformed( xx + sprite_get_width(spr_button_gpSELECT), yy3 , str3, .5, .5, 0);
+draw_sprite_ext( spr_button_gpSELECT, 0, xx - string_width(str3)/2, yy3, 1, 1, 0, c_white, 1);
+draw_text_transformed( xx, yy3 , str3, 1, 1, 0);
 
 
 // =========== def values
