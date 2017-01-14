@@ -37,6 +37,7 @@ frict = 2; // tarcie
 // predkosc przenoszenia przez ruchome platformy
 hsp_carry = 0;
 vsp_carry = 0;
+hsp_final = 0;
 
 gamepad_set_axis_deadzone(0,0.4); // tolerancja galek analogowych
 

@@ -27,6 +27,14 @@
             <kind>1</kind>
             <string>pause_surface = surface_create(view_wview[0], view_hview[0]);
 
+// ======== przypisanie predkoscci gracza do tymczasowych zmiennych
+player_temp_x = obj_player.x;
+player_temp_y = obj_player.y;
+player_temp_vspd = obj_player.vspd;
+player_temp_hspd = obj_player.hsp_final;
+player_temp_hsp_carry = obj_player.hsp_carry;
+// =================================
+
 surface_set_target(pause_surface);
 draw_clear_alpha(c_black,0);
 with(all)
@@ -41,8 +49,8 @@ with(all)
     }
 }
 surface_reset_target();
-
 instance_deactivate_all(true);
+
 visible=true;
 </string>
           </argument>
@@ -74,6 +82,12 @@ if (esc_key)
 {
     surface_free(pause_surface);
     instance_activate_all();
+    // przywrocenie predkosci gracza
+    obj_player.x = player_temp_x;
+    obj_player.y = player_temp_y;
+    obj_player.vspd = player_temp_vspd;
+    obj_player.hsp_final = player_temp_hspd;
+    obj_player.hsp_carry = player_temp_hsp_carry;
     instance_destroy();
 }
 

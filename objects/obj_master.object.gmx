@@ -59,7 +59,7 @@ global.names[3] = "Poziom 4";
           <argument>
             <kind>1</kind>
             <string>/// glosnosc gry
-audio_master_gain(.8);
+audio_master_gain(1);
 </string>
           </argument>
         </arguments>
