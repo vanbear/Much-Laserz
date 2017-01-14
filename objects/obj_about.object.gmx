@@ -95,7 +95,7 @@ var str_sfx = "Dzwieki: ChipTone #http://sfbgames.com/chiptone/##";
 var str_char = "Styl postaci: Capcom (Megaman)##"
 var str_beta = "Betatesty: Magdalena Puzyniak-Musial##";
 
-var str_thanks = "Podziekowania dla: HeartBeast, Shaun Spalding, #Making Games 101#";
+var str_thanks = "Podziekowania dla: HeartBeast, Shaun Spalding, #Making Games 101, xot, strawbryjam (GMLScripts)# ";
 
 var str_final = str_by+str_music+str_sfx+str_char+str_beta+str_thanks;
 draw_text(xx,yy+(string_height(str_final)/3)-50,str_final);

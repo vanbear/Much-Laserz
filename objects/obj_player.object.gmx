@@ -44,6 +44,9 @@ down_key = 0; // czy wcisniety zostal klawisz w dol
 
 last_dir = 1; // ostatni kierunek
 last_vspd = vspd; // ostatnia wartos predkosci pionowej
+
+player_sound_emitter = audio_emitter_create();
+audio_emitter_gain(player_sound_emitter,.3);
 </string>
           </argument>
         </arguments>
@@ -437,7 +440,7 @@ with (instance_place(x, y, obj_door))
 
 if (last_vspd &gt; 0 &amp;&amp; vspd == 0) 
 {
-    audio_play_sound(snd_player_landing,0,0);
+    audio_play_sound_on(player_sound_emitter,snd_player_landing,0,0);
 }
 </string>
           </argument>
