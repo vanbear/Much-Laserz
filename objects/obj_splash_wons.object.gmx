@@ -77,7 +77,7 @@ fade = 0.25;
             <kind>1</kind>
             <string>if (a == 1 &amp;&amp; alarm[0] == -1)
 {
-   alarm[0] = 2*room_speed;
+   alarm[0] = 3*room_speed;
 }
 
 if keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0,gp_face1) || gamepad_button_check_pressed(0,gp_start)
@@ -107,8 +107,21 @@ if keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_escape) || game
             <string>a = clamp(a + (fade * 0.05), 0, 1);
 
 image_alpha = a;
+
 draw_self();
 
+// rysowanie tekstu
+draw_set_alpha(a);
+draw_set_halign(fa_center);
+draw_set_font(fnt_arcade);
+draw_set_color(c_white);
+draw_text(x,y+sprite_height/2,"a game by Wonsu");
+
+
+// default
+draw_set_alpha(1);
+draw_set_halign(-1);
+draw_set_font(-1);
 
 
 </string>
