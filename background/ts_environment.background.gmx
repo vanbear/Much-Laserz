@@ -15,5 +15,5 @@
   <For3D>0</For3D>
   <width>256</width>
   <height>256</height>
-  <data>images\bg_environment.png</data>
+  <data>images\ts_environment.png</data>
 </background>

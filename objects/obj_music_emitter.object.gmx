@@ -39,10 +39,10 @@ music[1] = music_allofus;
 n = 0;
 last_n = n;
 
-
 snd = audio_play_sound(music[n],0,0);
 audio_sound_gain(snd, .2,1);
 show_debug_message("Music playing: " + audio_get_name(music[n]) );
+
 
 </string>
           </argument>

@@ -48,6 +48,7 @@
       <sprite>sprites\spr_splitter_NE_SW</sprite>
       <sprite>sprites\spr_splitter_N_S</sprite>
       <sprite>sprites\spr_splitter_W_E</sprite>
+      <sprite>sprites\spr_splitter_E</sprite>
       <sprite>sprites\spr_splitter_ALL</sprite>
     </sprites>
     <sprites name="walls">
@@ -68,6 +69,7 @@
     </sprites>
     <sprites name="game">
       <sprite>sprites\spr_logo</sprite>
+      <sprite>sprites\spr_splash_wons</sprite>
       <sprites name="tutorial">
         <sprite>sprites\spr_tutorial_jump_buttons</sprite>
         <sprite>sprites\spr_tutorial_use_buttons</sprite>
@@ -86,10 +88,10 @@
         <sprite>sprites\spr_button_X</sprite>
       </sprites>
     </sprites>
-    <sprite>sprites\spr_splash_wons</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\bg_environment</background>
+    <background>background\ts_environment</background>
+    <background>background\ts_blackrectangles</background>
   </backgrounds>
   <paths name="paths">
     <paths name="Level 2">
@@ -172,6 +174,7 @@
       <object>objects\obj_splitter_NE_SE</object>
       <object>objects\obj_splitter_NE_SW</object>
       <object>objects\obj_splitter_N_S</object>
+      <object>objects\obj_splitter_E</object>
       <object>objects\obj_splitter_W_E</object>
       <object>objects\obj_splitter_ALL</object>
     </objects>
@@ -192,6 +195,8 @@
       <room>rooms\rm_level_2</room>
       <room>rooms\rm_level_3</room>
       <room>rooms\rm_level_4</room>
+      <room>rooms\rm_level_5</room>
+      <room>rooms\rm_level_6</room>
     </rooms>
   </rooms>
   <help>

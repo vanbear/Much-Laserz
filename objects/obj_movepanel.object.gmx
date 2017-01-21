@@ -30,6 +30,7 @@
 dir = 0; // 0 - lewo, 1 - prawo
 active = false;
 ident=-1;
+spd = 1;
 
 // ustawiam alarm na przypisywanie sciezek, 
 // zeby sprawdzalo po utworzeniu sie innych obiektow, inaczej sie psuje,
@@ -96,7 +97,7 @@ with(obj_mirrortest)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var move_speed = 1;
+            <string>var move_speed = spd;
 
 if (!active)
 {
