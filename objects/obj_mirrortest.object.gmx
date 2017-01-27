@@ -29,6 +29,7 @@
 depth = -100;
 ident = -1;
 pthname = -1;
+pth_pos = 0;
 </string>
           </argument>
         </arguments>
