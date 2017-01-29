@@ -73,7 +73,9 @@
       <sprites name="tutorial">
         <sprite>sprites\spr_tutorial_jump_buttons</sprite>
         <sprite>sprites\spr_tutorial_use_buttons</sprite>
+        <sprite>sprites\spr_tutorial_restart_buttons</sprite>
         <sprite>sprites\spr_tutorial_jump_trigger</sprite>
+        <sprite>sprites\spr_tutorial_restart_trigger</sprite>
         <sprite>sprites\spr_tutorial_use_trigger</sprite>
       </sprites>
       <sprites name="buttons">
@@ -86,6 +88,7 @@
         <sprite>sprites\spr_button_Z</sprite>
         <sprite>sprites\spr_button_UP</sprite>
         <sprite>sprites\spr_button_X</sprite>
+        <sprite>sprites\spr_button_R</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -145,8 +148,10 @@
       <objects name="tutorial">
         <object>objects\obj_tutorial_jump</object>
         <object>objects\obj_tutorial_use</object>
+        <object>objects\obj_tutorial_restart</object>
         <object>objects\obj_tutorial_use_trigger</object>
         <object>objects\obj_tutorial_jump_trigger</object>
+        <object>objects\obj_tutorial_restart_trigger</object>
       </objects>
       <objects name="menu">
         <object>objects\obj_menu_lvl</object>
