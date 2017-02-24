@@ -121,6 +121,7 @@ draw_set_color(c_black);
 draw_set_alpha(.5);
 draw_rectangle(0,0,view_wport[0],view_hport[0],0);
 draw_set_alpha(1);
+draw_set_color(c_white);
 </string>
           </argument>
         </arguments>
@@ -169,6 +170,7 @@ draw_text_transformed( xx , yy3 , str3, 1, 1, 0);
 draw_set_font(-1);
 draw_set_halign(-1);
 draw_set_valign(-1);
+draw_set_color(c_white);
 </string>
           </argument>
         </arguments>

@@ -33,6 +33,7 @@ hspd = 0; // predkosc pozioma
 vspd = 0; // predkosc pionowa
 max_vertical_speed = 15; // maksymalna predkosc pionowa
 frict = 2; // tarcie
+canmove = true; //czy postac moze wykonywac akcje, potrzebne do smierci
 
 // predkosc przenoszenia przez ruchome platformy
 hsp_carry = 0;
@@ -48,6 +49,30 @@ last_vspd = vspd; // ostatnia wartos predkosci pionowej
 
 player_sound_emitter = audio_emitter_create();
 audio_emitter_gain(player_sound_emitter,.3);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// death
+room_restart();
 </string>
           </argument>
         </arguments>
@@ -166,6 +191,7 @@ if esc_key
     var use_key2 = keyboard_check_pressed(ord('Z')) || (gamepad_button_check_pressed(0,gp_face3));       //klawisze interakcji 2
     var use_key_hold2 = keyboard_check(ord('Z')) || (gamepad_button_check(0,gp_face3));
 
+
     var last_key=0;
 
     
@@ -175,7 +201,7 @@ if (place_meeting(x, y+1, obj_wall))  //co sie dzieje, gdy pod graczem jest podl
     //vspd = 0; // predkosc pionowa rowna zeru, gracz nie porusza sie pionowo
     
     // skok
-    if (jump_key)
+    if (jump_key &amp;&amp; canmove)
     {
         vspd = -jump_speed; // predkosc pionowa rowna "predkosci skoku", wartosc ujemna, poniewaz chcemy poruszac sie w gore
     }
@@ -188,14 +214,14 @@ else // co sie dzieje, kiedy jestesmy w powietrzu
         vspd += grav;   // zwiekszaj predkosc spadania o wartosc grawitacji
     }
 }
-if (vspd &lt; 0 &amp;&amp; !jump_key_hold)
+if (vspd &lt; 0 &amp;&amp; !jump_key_hold &amp;&amp; canmove)
 {
     vspd = max(vspd,-jump_speed/4);
 }
 
 
 // poruszanie sie w prawo
-if (right_key) // po wcisnieciu klawisza
+if (right_key &amp;&amp; canmove) // po wcisnieciu klawisza
 {
     hspd = spd; // dodajemy przypisana predkosc
 }
@@ -203,14 +229,14 @@ if (right_key) // po wcisnieciu klawisza
 
 
 // poruszanie sie w lewo
-if (left_key) // po wcisnieciu klawisza
+if (left_key &amp;&amp; canmove) // po wcisnieciu klawisza
 {
     hspd = -spd; // dodajemy przypisana predkosc
 }
 
     
 // gdy sie nie porusza
-if ((!right_key &amp;&amp; !left_key) || (right_key &amp;&amp; left_key))  // gdy nie wciskamy zadnego klawisza poruszsania na boki lub wciskamy oba
+if ((!right_key &amp;&amp; !left_key &amp;&amp; canmove) || (right_key &amp;&amp; left_key &amp;&amp; canmove))  // gdy nie wciskamy zadnego klawisza poruszsania na boki lub wciskamy oba
 {
     if (hspd != 0)
     {
@@ -280,7 +306,7 @@ y += vspd;
           <argument>
             <kind>1</kind>
             <string>///interakcja z obj_wheel
-if (use_key_hold)
+if (use_key_hold &amp;&amp; canmove)
 {   
     with (instance_place(x, y, obj_wheel))
     {
@@ -290,7 +316,7 @@ if (use_key_hold)
             active=true;
     }
 }
-if (use_key_hold2)
+if (use_key_hold2 &amp;&amp; canmove)
 {   
     with (instance_place(x, y, obj_wheel))
     {
@@ -329,7 +355,7 @@ if (!last_key) or (!place_meeting(x,y,obj_wheel))
 
 with (instance_place(x, y, obj_power))
 {
-    if (use_key) or (use_key2)
+    if (use_key &amp;&amp; other.canmove) or (use_key2 &amp;&amp; other.canmove)
     {
     //if (place_meeting(x,y,obj_power))
     //{
@@ -359,7 +385,7 @@ with (instance_place(x, y, obj_power))
             <kind>1</kind>
             <string>/// interakcja z obj_movepanel
 
-if (use_key_hold)
+if (use_key_hold &amp;&amp; canmove)
 {   
     with (instance_place(x, y, obj_movepanel))
     {
@@ -369,7 +395,7 @@ if (use_key_hold)
             active=true;
     }
 }
-if (use_key_hold2)
+if (use_key_hold2 &amp;&amp; canmove)
 {   
     with (instance_place(x, y, obj_movepanel))
     {
@@ -379,7 +405,7 @@ if (use_key_hold2)
             active=true;
     }
 }
-if (!last_key) or (!place_meeting(x,y,obj_movepanel))
+if (!last_key) or (!place_meeting(x,y,obj_movepanel) or (!canmove))
 {
     with(obj_movepanel)
         active=false;
@@ -408,7 +434,7 @@ if (!last_key) or (!place_meeting(x,y,obj_movepanel))
 
 with (instance_place(x, y, obj_door))
 {
-    if (use_key) or (use_key2)
+    if (use_key &amp;&amp; other.canmove) or (use_key2 &amp;&amp; other.canmove)
     {
         if (opened) 
         {
@@ -487,6 +513,8 @@ if (place_meeting(x,y+1,obj_wall))
 }
 
 if (vspd != 0) sprite_index = spr_player_jump;
+
+if (!canmove) sprite_index = spr_player_dead;
 </string>
           </argument>
         </arguments>

@@ -10,6 +10,7 @@
       <sound>sound\snd_door</sound>
       <sound>sound\snd_moving</sound>
       <sound>sound\snd_beep</sound>
+      <sound>sound\snd_dead</sound>
     </sounds>
     <sounds name="music">
       <sound>sound\music_underclocked</sound>
@@ -62,6 +63,7 @@
       <sprite>sprites\spr_player_blink</sprite>
       <sprite>sprites\spr_player_jump</sprite>
       <sprite>sprites\spr_player_run</sprite>
+      <sprite>sprites\spr_player_dead</sprite>
     </sprites>
     <sprites name="emitter">
       <sprite>sprites\spr_emitter_active</sprite>
@@ -114,6 +116,7 @@
   <scripts name="scripts">
     <script>scripts\collision_normal.gml</script>
     <script>scripts\draw_focus_outline.gml</script>
+    <script>scripts\scr_player_dead.gml</script>
     <scripts name="laser">
       <script>scripts\draw_laser.gml</script>
       <script>scripts\init_laser.gml</script>

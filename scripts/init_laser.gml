@@ -84,7 +84,19 @@ for (i=0; (i<length); i+=precision)
         inst.alarm[0] = 2;
         
         break;
+    }
+    if (collision_point (lx, ly , obj_player,1,1))
+    {
+        dis=i;
+        xx1 = xx+lengthdir_x(dis,dir);
+        yy1 = yy+lengthdir_y(dis,dir);
+        xx2 = xx+lengthdir_x(dis+precision,dir);
+        yy2 = yy+lengthdir_y(dis+precision,dir);
+        //rysowanie lasera
+        draw_laser(xx,yy,xx2,yy2,width,color);
         
+        scr_player_dead();
+        break;
     }
 }
 
