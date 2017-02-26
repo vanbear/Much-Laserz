@@ -28,6 +28,7 @@
             <string>///deklaraja zmiennych
 
 dir = 0; // 0 - lewo, 1 - prawo
+spd = 1;
 active=false;
 </string>
           </argument>
@@ -51,9 +52,7 @@ active=false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var rotation_speed = 0.5;
-
-if (!active)
+            <string>if (!active)
 {
     sprite_index=spr_wheel_off;   
 } 
@@ -68,10 +67,10 @@ else
     {
         if (other.ident==ident)
         {
-           if (other.dir==0)
-              image_angle-=rotation_speed;
-           if (other.dir==1)
-              image_angle+=rotation_speed;
+           if (other.dir==0) {
+              image_angle-=other.spd; if image_angle == 0 image_angle = 360; }
+           if (other.dir==1){
+              image_angle+=other.spd; if image_angle == 360 image_angle = 0; }
         }
     }
     
@@ -81,9 +80,9 @@ else
         if (other.ident==ident)
         {
             if (other.dir==0)
-               image_angle-=rotation_speed;
+               image_angle-=other.spd;
             if (other.dir==1)
-               image_angle+=rotation_speed;
+               image_angle+=other.spd;
         }
     }
     

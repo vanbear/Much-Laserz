@@ -98,6 +98,43 @@ for (i=0; (i<length); i+=precision)
         scr_player_dead();
         break;
     }
+    if (collision_point (lx, ly , obj_bend,1,1))
+    {
+        dis=i;
+        xx1 = xx+lengthdir_x(dis,dir);
+        yy1 = yy+lengthdir_y(dis,dir);
+        xx2 = xx+lengthdir_x(dis+precision,dir);
+        yy2 = yy+lengthdir_y(dis+precision,dir);
+        //rysowanie lasera
+        draw_laser(xx,yy,xx1,yy1,width,color);
+        
+        inst = instance_nearest(xx2,yy2,obj_bend);
+        inst.xx = xx1;
+        inst.yy = yy1;
+        
+        n=collision_normal(xx1,yy1,inst,7.5,1);
+        if (n == -1) {show_debug_message("ERROR: "); break;}
+        
+        ///obliczenia
+        
+        wsp = 1.33; //wspolczynnik zalamania wody
+        
+        alpha = abs(dir - 270); 
+        beta = arcsin(dsin(alpha)/wsp); 
+        inst.dir = dir - radtodeg(beta); 
+        ///koniec obliczen
+        show_debug_message("Kat padania: " + string(alpha));
+        show_debug_message("Kat zalamania: " + string(radtodeg(beta)));
+        show_debug_message("Kierunek lasera: " + string(inst.dir)); show_debug_message(" ");
+        
+        
+        inst.dis = length-dis;
+        
+        with inst {init_laser(dis,precision,color)}
+        break;
+        
+        break;
+    }
 }
 
 
