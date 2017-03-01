@@ -94,6 +94,8 @@
     <instance objName="obj_platform" x="1632" y="256" name="inst_7675B45D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platform" x="1824" y="224" name="inst_B5971B10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_power" x="1824" y="192" name="inst_00F14638" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="1472" y="320" name="inst_6C6CBF2A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="1856" y="320" name="inst_B57B172A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="ts_environment" x="128" y="512" w="32" h="32" xo="128" yo="0" id="10009678" name="inst_DFBD9FF0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -833,6 +835,8 @@
     <tile bgName="ts_environment" x="1920" y="320" w="32" h="32" xo="224" yo="192" id="10011290" name="inst_7C7E0270" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_environment" x="1920" y="384" w="32" h="32" xo="224" yo="192" id="10011291" name="inst_68F762E0" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_environment" x="1920" y="448" w="32" h="32" xo="224" yo="192" id="10011292" name="inst_081E4387" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_environment" x="1472" y="320" w="32" h="32" xo="96" yo="64" id="10013764" name="inst_AA73141C" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_environment" x="1856" y="320" w="32" h="32" xo="96" yo="64" id="10013765" name="inst_5EB3F284" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_environment" x="1184" y="448" w="32" h="32" xo="96" yo="64" id="10010161" name="inst_082A6FC3" depth="-100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_environment" x="1184" y="480" w="32" h="32" xo="96" yo="64" id="10010162" name="inst_D724B119" depth="-100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_blackrectangles" x="1184" y="352" w="32" h="32" xo="32" yo="0" id="10010169" name="inst_59C8B2D2" depth="-100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

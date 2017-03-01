@@ -37,7 +37,8 @@ global.levels[6] = rm_level_7;
 global.levels[7] = rm_level_8;
 global.levels[8] = rm_level_9;
 global.levels[9] = rm_level_10;
-global.levels[10] = rm_level_fizbit;
+global.levels[10] = rm_level_11;
+global.levels[11] = rm_level_fizbit;
 
 
 global.names[0] = "Poziom 1";
@@ -50,7 +51,8 @@ global.names[6] = "Poziom 7";
 global.names[7] = "Poziom 8";
 global.names[8] = "Poziom 9";
 global.names[9] = "Poziom 10";
-global.names[10] = "Fizbit";
+global.names[10] = "Poziom 11";
+global.names[11] = "Fizbit";
 
 
 

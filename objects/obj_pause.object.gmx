@@ -27,12 +27,22 @@
             <kind>1</kind>
             <string>pause_surface = surface_create(view_wview[0], view_hview[0]);
 
+
+for (i = 0; i &lt; instance_number(obj_player); i++)
+{
+    players[i] = instance_find(obj_player,i);
+}
+
 // ======== przypisanie predkoscci gracza do tymczasowych zmiennych
-player_temp_x = obj_player.x;
-player_temp_y = obj_player.y;
-player_temp_vspd = obj_player.vspd;
-player_temp_hspd = obj_player.hsp_final;
-player_temp_hsp_carry = obj_player.hsp_carry;
+for (i = 0; i &lt; instance_number(obj_player); i++)
+{
+    player_temp_x[i] = players[i].x;
+    player_temp_y[i] = players[i].y;
+    player_temp_vspd[i] = players[i].vspd;
+    player_temp_hspd[i] = players[i].hsp_final;
+    player_temp_hsp_carry[i] = players[i].hsp_carry;
+}
+
 // =================================
 
 surface_set_target(pause_surface);
@@ -82,12 +92,16 @@ if (esc_key)
 {
     surface_free(pause_surface);
     instance_activate_all();
-    // przywrocenie predkosci gracza
-    obj_player.x = player_temp_x;
-    obj_player.y = player_temp_y;
-    obj_player.vspd = player_temp_vspd;
-    obj_player.hsp_final = player_temp_hspd;
-    obj_player.hsp_carry = player_temp_hsp_carry;
+    // przywrocenie predkosci gracza 
+    for (i = 0; i &lt; array_length_1d(players); i++)
+    { 
+        players[i].x = player_temp_x[i];
+        players[i].y = player_temp_y[i];
+        players[i].vspd = player_temp_vspd[i];
+        players[i].hsp_final = player_temp_hspd[i];
+        players[i].hsp_carry = player_temp_hsp_carry[i];
+    }
+    
     instance_destroy();
 }
 

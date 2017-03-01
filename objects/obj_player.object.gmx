@@ -34,6 +34,7 @@ vspd = 0; // predkosc pionowa
 max_vertical_speed = 15; // maksymalna predkosc pionowa
 frict = 2; // tarcie
 canmove = true; //czy postac moze wykonywac akcje, potrzebne do smierci
+is_second = false;
 
 // predkosc przenoszenia przez ruchome platformy
 hsp_carry = 0;
@@ -149,7 +150,7 @@ var esc_key = keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(
 if reset_key
     room_restart();
 
-if esc_key
+if esc_key &amp;&amp; !is_second
    instance_create(0,0,obj_pause);
 </string>
           </argument>

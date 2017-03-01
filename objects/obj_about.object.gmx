@@ -87,7 +87,7 @@ yl = sprite_get_height(spr_logo);
 
 draw_sprite(spr_logo, 0, xx, yl);
 
-var str_by = "By Daniel Was.##Informatyka Stosowana i Systemy Pomiarowe#Uniwersytet Wroclawski##github.com/vanbear/Much-Laserz";
+var str_by = "By Daniel Was.##Informatyka Stosowana i Systemy Pomiarowe#Uniwersytet Wroclawski##github.com/vanbear/Much-Laserz##";
 
 var str_music = "Muzyka: Eric Skiff#http://ericskiff.com/##";
 var str_sfx = "Dzwieki: ChipTone #http://sfbgames.com/chiptone/##";
