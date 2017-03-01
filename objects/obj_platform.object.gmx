@@ -82,7 +82,7 @@ y=y+1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(spr_platform,0,x,y);
+            <string>//draw_sprite(spr_platform,0,x,y);
 </string>
           </argument>
         </arguments>

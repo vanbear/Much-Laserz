@@ -119,10 +119,13 @@ for (i=0; (i<length); i+=precision)
         
         wsp = 1.33; //wspolczynnik zalamania wody
         
-        alpha = abs(dir - 270); 
+        alpha = abs(dir - n);
         beta = arcsin(dsin(alpha)/wsp); 
-        inst.dir = dir - radtodeg(beta); 
+        inst.dir = n + 180 - radtodeg(beta); 
+        
+    
         ///koniec obliczen
+        show_debug_message("Normalna: " + string(n));
         show_debug_message("Kat padania: " + string(alpha));
         show_debug_message("Kat zalamania: " + string(radtodeg(beta)));
         show_debug_message("Kierunek lasera: " + string(inst.dir)); show_debug_message(" ");

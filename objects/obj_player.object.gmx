@@ -270,8 +270,6 @@ if (place_meeting(x+hsp_final, y, obj_wall))
 x+=hsp_final;
 
 
-
-
 // kolizje ze scianami pionowo
 if (place_meeting(x, y+vspd, obj_wall)) //sprawdza, czy w kolejnym kroku w poziomie znajduje sie sciana
 {
@@ -282,6 +280,8 @@ if (place_meeting(x, y+vspd, obj_wall)) //sprawdza, czy w kolejnym kroku w pozio
     vspd = 0; // gdy juz bedziemy przy scianie, zatrzymaj sie
 }
 // cala ta czesc to zabezpieczenie przed pojawieniem sie wewnatrz sciany
+
+
 
 // poruszanie sie w pionie
 y += vspd;
@@ -501,7 +501,7 @@ var blink_current = 0;
 
 if hspd!=0 image_xscale = sign(hspd);
 
-if (place_meeting(x,y+1,obj_wall))
+if (place_meeting(x,y+1,obj_wall) || place_meeting(x,y+1,obj_platform))
 {
     if (hspd!=0) sprite_index = spr_player_run;
     else 

@@ -21,6 +21,7 @@
     <sprites name="sensor">
       <sprite>sprites\spr_sensor_active</sprite>
       <sprite>sprites\spr_sensor_unactive</sprite>
+      <sprite>sprites\spr_indicator</sprite>
     </sprites>
     <sprites name="doors">
       <sprite>sprites\spr_door_closed</sprite>
@@ -50,6 +51,9 @@
       <sprite>sprites\spr_splitter_N_S</sprite>
       <sprite>sprites\spr_splitter_W_E</sprite>
       <sprite>sprites\spr_splitter_E</sprite>
+      <sprite>sprites\sor_splitter_S</sprite>
+      <sprite>sprites\spr_splitter_S_E</sprite>
+      <sprite>sprites\spr_splitter_N_E</sprite>
       <sprite>sprites\spr_splitter_ALL</sprite>
     </sprites>
     <sprites name="walls">
@@ -94,6 +98,7 @@
       </sprites>
     </sprites>
     <sprite>sprites\spr_bend</sprite>
+    <sprite>sprites\spr_water_surface</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\ts_environment</background>
@@ -168,6 +173,8 @@
     <objects name="laser stuff">
       <object>objects\obj_emitter</object>
       <object>objects\obj_sensor</object>
+      <object>objects\obj_emitter_timer</object>
+      <object>objects\obj_indicator</object>
     </objects>
     <objects name="mirrors">
       <object>objects\obj_mirrortest</object>
@@ -177,6 +184,7 @@
       <object>objects\obj_wall</object>
       <object>objects\obj_platform</object>
       <object>objects\obj_movingplatform</object>
+      <object>objects\obj_water_surface</object>
     </objects>
     <objects name="splitters">
       <object>objects\par_splitter</object>
@@ -184,8 +192,11 @@
       <object>objects\obj_splitter_NE_SW</object>
       <object>objects\obj_splitter_N_S</object>
       <object>objects\obj_splitter_E</object>
+      <object>objects\obj_splitter_S</object>
       <object>objects\obj_splitter_W_E</object>
       <object>objects\obj_splitter_ALL</object>
+      <object>objects\obj_splitter_S_E</object>
+      <object>objects\obj_splitter_N_E</object>
     </objects>
     <object>objects\obj_bend</object>
   </objects>
@@ -207,6 +218,9 @@
       <room>rooms\rm_level_4</room>
       <room>rooms\rm_level_5</room>
       <room>rooms\rm_level_6</room>
+      <room>rooms\rm_level_7</room>
+      <room>rooms\rm_level_8</room>
+      <room>rooms\rm_level_fizbit</room>
     </rooms>
   </rooms>
   <help>
