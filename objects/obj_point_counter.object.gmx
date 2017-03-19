@@ -3,8 +3,8 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>727379969</depth>
-  <persistent>-1</persistent>
+  <depth>0</depth>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,67 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// lista poziomow
+            <string>/// Creaton delay
 
-global.levels[0] = rm_level_1;
-global.levels[1] = rm_level_2;
-global.levels[2] = rm_level_3;
-global.levels[3] = rm_level_4;
-global.levels[4] = rm_level_5;
-global.levels[5] = rm_level_6;
-global.levels[6] = rm_level_7;
-global.levels[7] = rm_level_8;
-global.levels[8] = rm_level_9;
-global.levels[9] = rm_level_10;
-global.levels[10] = rm_level_11;
-global.levels[11] = rm_level_fizbit;
-global.levels[12] = rm_level_WFA;
+alarm[0] = 1;
 
-
-global.names[0] = "Poziom 1";
-global.names[1] = "Poziom 2";
-global.names[2] = "Poziom 3";
-global.names[3] = "Poziom 4";
-global.names[4] = "Poziom 5";
-global.names[5] = "Poziom 6";
-global.names[6] = "Poziom 7";
-global.names[7] = "Poziom 8";
-global.names[8] = "Poziom 9";
-global.names[9] = "Poziom 10";
-global.names[10] = "Poziom 11";
-global.names[11] = "Fizbit";
-global.names[12] = "Dni Otwarte";
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// ustawienia gry
-audio_master_gain(1);
-
-texture_set_interpolation(false);
+sensor_count = 0;  //liczba wszystkich sensorow na planszy
+active_count = 0;  //liczba aktywnych sensorow
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="1" enumb="0">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -102,7 +53,43 @@ texture_set_interpolation(false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_debug_message("Master destroyed");
+            <string>/// tablica sensorow
+for (i = 0; i &lt; instance_number(obj_sensor); i++)
+{
+    sensors[i] = instance_find(obj_sensor,i);
+}
+
+sensor_count = array_length_1d(sensors);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Check active sensors
+
+active_count = 0;
+
+for (i = 0; i &lt; array_length_1d(sensors); i++)
+{
+    if sensors[i].active active_count++;
+}
 </string>
           </argument>
         </arguments>
@@ -125,12 +112,21 @@ texture_set_interpolation(false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(-1);
-draw_set_color(c_white);
-draw_text(10, 10, "FPS = " + string(fps));  // wyswietl licznik fps
+            <string>/// Wyswietlanie licznika
 
-display_set_gui_size(1024, 768);
-//draw_set_color(-1);
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+draw_set_font(fnt_arcade);
+draw_set_color(c_white);
+
+text = "Punkty: "+string(active_count) +" / "+ string(sensor_count);
+draw_text_outline(view_wview[0]/2,15,text);
+
+draw_set_halign(-1);
+draw_set_valign(-1);
+draw_set_font(-1);
+draw_set_color(-1);
+
 </string>
           </argument>
         </arguments>

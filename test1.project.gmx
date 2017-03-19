@@ -62,6 +62,7 @@
       <sprite>sprites\spr_moving_platform</sprite>
       <sprite>sprites\spr_moving_platform_fire</sprite>
       <sprite>sprites\spr_platform</sprite>
+      <sprite>sprites\spr_wall_on</sprite>
     </sprites>
     <sprites name="player">
       <sprite>sprites\spr_player_idle</sprite>
@@ -100,9 +101,11 @@
     </sprites>
     <sprite>sprites\spr_bend</sprite>
     <sprite>sprites\spr_water_surface</sprite>
+    <sprite>sprites\spr_empty</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\ts_environment</background>
+    <background>background\ts_environment2</background>
     <background>background\ts_blackrectangles</background>
     <background>background\ts_water</background>
   </backgrounds>
@@ -140,6 +143,7 @@
       <script>scripts\scr_splitter_SW.gml</script>
       <script>scripts\scr_splitter_NW.gml</script>
     </scripts>
+    <script>scripts\draw_text_outline.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_arcade</font>
@@ -166,6 +170,7 @@
         <object>objects\obj_menu</object>
         <object>objects\obj_about</object>
       </objects>
+      <object>objects\obj_point_counter</object>
     </objects>
     <objects name="panels">
       <object>objects\obj_power</object>
@@ -187,6 +192,7 @@
       <object>objects\obj_platform</object>
       <object>objects\obj_movingplatform</object>
       <object>objects\obj_water_surface</object>
+      <object>objects\obj_wall_switchable</object>
     </objects>
     <objects name="splitters">
       <object>objects\par_splitter</object>
@@ -227,6 +233,7 @@
       <room>rooms\rm_level_10</room>
       <room>rooms\rm_level_11</room>
       <room>rooms\rm_level_fizbit</room>
+      <room>rooms\rm_level_WFA</room>
     </rooms>
   </rooms>
   <help>
