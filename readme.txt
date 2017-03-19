@@ -8,38 +8,39 @@
 		https://github.com/vanbear/Much-Laserz
 ==============================================================================================================
 
-Jak graæ:
-Celem gry jest dojœcie do drzwi, które, oczywiœcie, musz¹ byæ otwarte, aby móc wejœæ z nimi w interakcjê. 
-Czasami otwarte s¹ ju¿ na pocz¹tku poziomu, zazwyczaj trzeba rozwi¹zaæ ³amig³ówkê aby je odblokowaæ. 
-Pomóc nam w tym mog¹ ró¿ne elementy zawarte w grze:
-- lustra odbijaj¹ce promieñ lasera
-- w³¹cznik zasilania emittera
-- panel steruj¹cy kierunkiem emittera lub lustra
-- panej steruj¹cy po³o¿eniem emittera lub lustra
+Jak graÄ‡:
+Celem gry jest dojÅ›cie do drzwi, ktÃ³re, oczywiÅ›cie, muszÄ… byÄ‡ otwarte, aby mÃ³c wejÅ›Ä‡ z nimi w interakcjÄ™. 
+Czasami otwarte sÄ… juÅ¼ na poczÄ…tku poziomu, zazwyczaj trzeba rozwiÄ…zaÄ‡ Å‚amigÅ‚Ã³wkÄ™ aby je odblokowaÄ‡. 
+PomÃ³c nam w tym mogÄ… rÃ³Å¼ne elementy zawarte w grze:
+- lustra odbijajÄ…ce promieÅ„ lasera
+- wÅ‚Ä…cznik zasilania emittera
+- panel sterujÄ…cy kierunkiem emittera lub lustra
+- panej sterujÄ…cy poÅ‚oÅ¼eniem emittera lub lustra
 - rozdzielacze promieni
-- sesnory, do których musisz doprowadziæ promieñ aby otworzyæ drzwi
+- sesnory, do ktÃ³rych musisz doprowadziÄ‡ promieÅ„ aby otworzyÄ‡ drzwi
 ... i inne!
-W grze znajduj¹ siê zarówno poziomy logiczne jak i zrêcznoœciowe, a ich poziom trudnoœci jest zró¿nicowany. 
-Kolejne poziomy i/lub mechaniki bêd¹ dodawane w kolejnych aktualizacjach.
+W grze znajdujÄ… siÄ™ zarÃ³wno poziomy logiczne jak i zrÄ™cznoÅ›ciowe, a ich poziom trudnoÅ›ci jest zrÃ³Å¼nicowany. 
+Kolejne poziomy i/lub mechaniki bÄ™dÄ… dodawane w kolejnych aktualizacjach.
 Powodzenia!
 
 Sterowanie:
-Poruszanie siê ............. klawisze strza³ek lewo/prawo
-Skok ....................... strza³ka w górê
-Zeskok z platformy ......... strza³ka w dó³
-Interakcja "w lewo" ........ Z
-Interakcja "w prawo" ....... X
-Restart poziomu ............ R
-Pauza / wznowienie gry ..... ESC
-Powrót do menu ............. P (podczas pauzy)
+				klawiatura				kontroler
+Poruszanie siÄ™ ............. klawisze strzaÅ‚ek lewo/prawo ...... lewy analog - oÅ› X
+Skok ....................... strzaÅ‚ka w gÃ³rÄ™ ................... A
+Zeskok z platformy ......... strzaÅ‚ka w dÃ³Å‚ .................... lewy anagol - oÅ› Y+
+Interakcja "w lewo" ........ Z ................................. X
+Interakcja "w prawo" ....... X ................................. B
+Restart poziomu ............ R ................................. SELECT
+Pauza / wznowienie gry ..... ESC ............................... START
+PowrÃ³t do menu ............. P (podczas pauzy) ................. SELECT (podczas pauzy)
 
 ==============================================================================================================
 
-by Daniel W¹s
-Student kierunku Informatyka Stosowana i Systemy Pomiarowe Uniwersytetu Wroc³awskiego
+by Daniel WÄ…s
+Student kierunku Informatyka Stosowana i Systemy Pomiarowe Uniwersytetu WrocÅ‚awskiego
 
 Muzyka: Eric Skiff - http://ericskiff.com/music/
-DŸwiêki: ChipTone - http://sfbgames.com/chiptone/
+DÅºwiÄ™ki: ChipTone - http://sfbgames.com/chiptone/
 Styl postaci: Capcom (Megaman)
-Testy: Magdalena Puzyniak-Musia³
-Podziêkowania dla: HeartBeast, Shaun Spalding, Making Games 101, xot i strawbryjam (GMLScripts)
+Testy: Magdalena Puzyniak-MusiaÅ‚
+PodziÄ™kowania dla: HeartBeast, Shaun Spalding, Making Games 101, xot i strawbryjam (GMLScripts)
