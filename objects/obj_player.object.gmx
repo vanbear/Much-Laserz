@@ -362,6 +362,15 @@ with (instance_place(x, y, obj_power))
     //{
         if (active) active=false;
         else active=true; 
+        
+        with (obj_power)
+        {
+            if (ident == other.ident)
+            {
+                if active != other.active active = other.active;
+            }
+        }
+    
     }    
 }
 </string>

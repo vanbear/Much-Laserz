@@ -63,6 +63,7 @@
       <sprite>sprites\spr_moving_platform_fire</sprite>
       <sprite>sprites\spr_platform</sprite>
       <sprite>sprites\spr_wall_on</sprite>
+      <sprite>sprites\spr_wall_off</sprite>
     </sprites>
     <sprites name="player">
       <sprite>sprites\spr_player_idle</sprite>
@@ -119,6 +120,14 @@
       <path>paths\pth_lvl3_mirror2</path>
       <path>paths\pth_lvl3_mirror3</path>
       <path>paths\pth_lvl3_mirror4</path>
+    </paths>
+    <paths name="Dni Otwarte">
+      <path>paths\pth_WFA_1_1</path>
+      <path>paths\pth_WFA_2_1</path>
+      <path>paths\pth_WFA_2_2</path>
+      <path>paths\pth_WFA_2_3</path>
+      <path>paths\pth_WFA_2_4</path>
+      <path>paths\pth_WFA_2_5</path>
     </paths>
   </paths>
   <scripts name="scripts">
@@ -178,8 +187,8 @@
       <object>objects\obj_wheel</object>
     </objects>
     <objects name="laser stuff">
-      <object>objects\obj_emitter</object>
       <object>objects\obj_sensor</object>
+      <object>objects\obj_emitter</object>
       <object>objects\obj_emitter_timer</object>
       <object>objects\obj_indicator</object>
     </objects>
@@ -193,6 +202,7 @@
       <object>objects\obj_movingplatform</object>
       <object>objects\obj_water_surface</object>
       <object>objects\obj_wall_switchable</object>
+      <object>objects\obj_wall_switchable_reverse</object>
     </objects>
     <objects name="splitters">
       <object>objects\par_splitter</object>

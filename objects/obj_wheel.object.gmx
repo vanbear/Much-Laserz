@@ -52,7 +52,13 @@ active=false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!active)
+            <string>var objects;
+objects[0] = obj_emitter;
+objects[1] = obj_mirrortest;
+objects[2] = par_splitter;
+
+
+if (!active)
 {
     sprite_index=spr_wheel_off;   
 } 
@@ -61,8 +67,21 @@ else
     if dir sprite_index=spr_wheel_left; 
     else sprite_index=spr_wheel_right; 
     
+    for (var i=0; i&lt;array_length_1d(objects); i++)
+    {
+            with (objects[i])
+            {
+                if (other.ident==ident)
+                {
+                   if (other.dir==0) {
+                      image_angle-=other.spd; if image_angle == 0 image_angle = 360; }
+                   if (other.dir==1){
+                      image_angle+=other.spd; if image_angle == 360 image_angle = 0; }
+                }
+            }
+    }
     
-    // obracanie emittera
+    /*/ obracanie emittera
     with (obj_emitter)
     {
         if (other.ident==ident)
@@ -76,15 +95,16 @@ else
     
     //obracanie lustra
     with (obj_mirrortest)
-    {  
+    {
         if (other.ident==ident)
         {
-            if (other.dir==0)
-               image_angle-=other.spd;
-            if (other.dir==1)
-               image_angle+=other.spd;
+           if (other.dir==0) {
+              image_angle-=other.spd; if image_angle == 0 image_angle = 360; }
+           if (other.dir==1){
+              image_angle+=other.spd; if image_angle == 360 image_angle = 0; }
         }
-    }
+    }*/
+    
     
 }
 

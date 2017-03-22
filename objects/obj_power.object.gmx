@@ -28,6 +28,8 @@
             <string>ident=-1;
 active=false;
 previous_state = active;
+
+alarm[0] = 1;
 </string>
           </argument>
         </arguments>
@@ -51,6 +53,8 @@ previous_state = active;
           <argument>
             <kind>1</kind>
             <string>previous_state = active; // zmien status
+
+
 </string>
           </argument>
         </arguments>
@@ -92,6 +96,8 @@ with (obj_emitter)
             active=false;
     }
 }
+
+
 
 if (active != previous_state) 
 {
