@@ -114,12 +114,20 @@ for (i = 0; i &lt; array_length_1d(sensors); i++)
             <kind>1</kind>
             <string>/// Wyswietlanie licznika
 
+//prostokat
+draw_set_alpha(.5);
+draw_set_color(c_black);
+draw_rectangle(0,0,view_wview[0],30,0);
+draw_set_alpha(1);
+draw_set_color(-1);
+
+// licznik
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_font(fnt_arcade);
 draw_set_color(c_white);
 
-text = "Punkty: "+string(active_count) +" / "+ string(sensor_count);
+text = "Punkty: "+string(active_count) +" / "+ string(sensor_count)+"   |   Najlepszy wynik:"+string(global.max_points);
 draw_text_outline(view_wview[0]/2,15,text);
 
 draw_set_halign(-1);

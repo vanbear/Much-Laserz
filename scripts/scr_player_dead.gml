@@ -11,6 +11,13 @@ with (obj_player)
         hspd = 0;
         hsp_final = 0;
         grav = 0;
+        if (instance_exists(obj_point_counter))
+            if (global.max_points < obj_point_counter.active_count)
+            {
+                global.max_points = obj_point_counter.active_count;
+                show_debug_message("Nowy max: "+string(global.max_points));
+            }
+                
         
         alarm[1]=2*room_speed;
     }
