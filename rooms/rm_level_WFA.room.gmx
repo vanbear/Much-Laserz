@@ -205,6 +205,9 @@
     <instance objName="obj_platform" x="96" y="448" name="inst_56417798" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platform" x="1216" y="576" name="inst_C11AB9C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_platform" x="1216" y="640" name="inst_0CB5CE8B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_arrow_down" x="768" y="864" name="inst_A59C744C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_arrow_down" x="1760" y="864" name="inst_4D2AE9D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
+    <instance objName="obj_platform" x="1376" y="480" name="inst_FFEDB2B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="ts_environment" x="128" y="736" w="32" h="32" xo="64" yo="224" id="10014086" name="inst_9466E351" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -1918,6 +1921,8 @@
     <tile bgName="ts_blackrectangles" x="1280" y="800" w="32" h="32" xo="0" yo="32" id="10017620" name="inst_7F7E6309" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_blackrectangles" x="1248" y="832" w="32" h="32" xo="0" yo="32" id="10017621" name="inst_B4465FEF" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_blackrectangles" x="1216" y="864" w="32" h="32" xo="0" yo="32" id="10017622" name="inst_56D811AA" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_environment" x="1344" y="480" w="32" h="32" xo="160" yo="192" id="10017623" name="inst_58F965F3" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_environment" x="1376" y="480" w="32" h="32" xo="224" yo="192" id="10017624" name="inst_CFFC3946" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_water" x="1280" y="1184" w="32" h="32" xo="0" yo="0" id="10015246" name="inst_809A4B83" depth="-10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_water" x="1248" y="1184" w="32" h="32" xo="0" yo="0" id="10015247" name="inst_5D2B4117" depth="-10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_water" x="1216" y="1184" w="32" h="32" xo="0" yo="0" id="10015248" name="inst_48FACBEF" depth="-10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

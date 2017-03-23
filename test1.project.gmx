@@ -104,6 +104,7 @@
     <sprite>sprites\spr_water_surface</sprite>
     <sprite>sprites\spr_empty</sprite>
     <sprite>sprites\testest</sprite>
+    <sprite>sprites\spr_arrow_down</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\ts_environment</background>
@@ -220,6 +221,7 @@
       <object>objects\obj_splitter_N_E</object>
     </objects>
     <object>objects\obj_bend</object>
+    <object>objects\obj_arrow_down</object>
   </objects>
   <rooms name="rooms">
     <rooms name="menus">
