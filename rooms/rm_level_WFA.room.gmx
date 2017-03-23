@@ -51,7 +51,7 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_player" x="1376" y="512" name="inst_DE67B448" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="192" y="864" name="inst_DE67B448" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="32" y="896" name="inst_E7F4E3F8" locked="0" code="" scaleX="22" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_switchable" x="704" y="832" name="inst_9529AF37" locked="0" code="ident = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_power" x="544" y="864" name="inst_D558A6D6" locked="0" code="ident = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
