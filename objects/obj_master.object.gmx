@@ -27,34 +27,35 @@
             <kind>1</kind>
             <string>/// lista poziomow
 
-global.levels[0] = rm_level_1;
-global.levels[1] = rm_level_2;
-global.levels[2] = rm_level_3;
-global.levels[3] = rm_level_4;
-global.levels[4] = rm_level_5;
-global.levels[5] = rm_level_6;
-global.levels[6] = rm_level_7;
-global.levels[7] = rm_level_8;
-global.levels[8] = rm_level_9;
-global.levels[9] = rm_level_10;
-global.levels[10] = rm_level_11;
-global.levels[11] = rm_level_fizbit;
-global.levels[12] = rm_WFA_intro;
+global.levels[0] = rm_WFA_intro;
+global.levels[1] = rm_level_1;
+global.levels[2] = rm_level_2;
+global.levels[3] = rm_level_3;
+global.levels[4] = rm_level_4;
+global.levels[5] = rm_level_5;
+global.levels[6] = rm_level_6;
+global.levels[7] = rm_level_7;
+global.levels[8] = rm_level_8;
+global.levels[9] = rm_level_9;
+global.levels[10] = rm_level_10;
+global.levels[11] = rm_level_11;
+global.levels[12] = rm_level_fizbit;
 
 
-global.names[0] = "Poziom 1";
-global.names[1] = "Poziom 2";
-global.names[2] = "Poziom 3";
-global.names[3] = "Poziom 4";
-global.names[4] = "Poziom 5";
-global.names[5] = "Poziom 6";
-global.names[6] = "Poziom 7";
-global.names[7] = "Poziom 8";
-global.names[8] = "Poziom 9";
-global.names[9] = "Poziom 10";
-global.names[10] = "Poziom 11";
-global.names[11] = "Fizbit";
-global.names[12] = "Dni Otwarte";
+global.names[0] = "Dni Otwarte";
+global.names[1] = "Poziom 1";
+global.names[2] = "Poziom 2";
+global.names[3] = "Poziom 3";
+global.names[4] = "Poziom 4";
+global.names[5] = "Poziom 5";
+global.names[6] = "Poziom 6";
+global.names[7] = "Poziom 7";
+global.names[8] = "Poziom 8";
+global.names[9] = "Poziom 9";
+global.names[10] = "Poziom 10";
+global.names[11] = "Poziom 11";
+global.names[12] = "Fizbit";
+
 
 </string>
           </argument>

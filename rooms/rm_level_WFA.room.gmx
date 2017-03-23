@@ -51,7 +51,7 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_player" x="224" y="864" name="inst_DE67B448" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="208" y="864" name="inst_DE67B448" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="32" y="896" name="inst_E7F4E3F8" locked="0" code="" scaleX="22" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_switchable" x="704" y="832" name="inst_9529AF37" locked="0" code="ident = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_power" x="544" y="864" name="inst_D558A6D6" locked="0" code="ident = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -142,17 +142,8 @@
     <instance objName="obj_wall" x="608" y="448" name="inst_686CC4B4" locked="0" code="" scaleX="1" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="obj_splitter_ALL" x="896" y="512" name="inst_BD025AC3" locked="0" code="ident = 42;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wheel" x="1056" y="672" name="inst_DC5CA8A6" locked="0" code="ident = 42;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_power" x="928" y="640" name="inst_7F557625" locked="0" code="ident = 41;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sensor" x="896" y="416" name="inst_3B308CB3" locked="0" code="ident = 44;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall_switchable" x="960" y="672" name="inst_E2FC4517" locked="0" code="ident = 44;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall_switchable" x="960" y="640" name="inst_ED23BA0F" locked="0" code="ident = 44;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall_switchable" x="960" y="608" name="inst_F8E740FA" locked="0" code="ident = 44;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall_switchable_reverse" x="1024" y="544" name="inst_54E916F6" locked="0" code="ident = 44;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall_switchable_reverse" x="1056" y="512" name="inst_C4831FB3" locked="0" code="ident = 44;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall_switchable" x="1120" y="448" name="inst_D455009E" locked="0" code="ident = 44;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall_switchable" x="1088" y="480" name="inst_95E14FF7" locked="0" code="ident = 44;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wheel" x="864" y="672" name="inst_E127844D" locked="0" code="ident = 42;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="928" y="672" name="inst_83131E81" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sensor" x="736" y="640" name="inst_F970F252" locked="0" code="ident = 46;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_power" x="1120" y="672" name="inst_180D62AD" locked="0" code="ident = 41;&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wheel" x="720" y="560" name="inst_B8276BAD" locked="0" code="ident = 42;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -209,6 +200,9 @@
     <instance objName="obj_movepanel" x="432" y="416" name="inst_C093AC7D" locked="0" code="ident = 107;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_movepanel" x="496" y="416" name="inst_D0982EBA" locked="0" code="ident = 108;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wheel" x="720" y="480" name="inst_A688D84C" locked="0" code="ident = 42;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wheel" x="960" y="672" name="inst_14C281F6" locked="0" code="ident = 42;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_tutorial_jump_trigger" x="256" y="800" name="inst_A5CFBC96" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="obj_tutorial_use_trigger" x="496" y="800" name="inst_C11A4521" locked="0" code="" scaleX="3.09677410125732" scaleY="3" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="ts_environment" x="128" y="736" w="32" h="32" xo="64" yo="224" id="10014086" name="inst_9466E351" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -1720,7 +1714,6 @@
     <tile bgName="ts_environment" x="160" y="352" w="32" h="32" xo="32" yo="96" id="10015708" name="inst_626D34FC" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_environment" x="1408" y="352" w="32" h="32" xo="160" yo="64" id="10015712" name="inst_EF7F46FE" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_environment" x="1152" y="448" w="32" h="32" xo="96" yo="64" id="10015792" name="inst_D968662B" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_environment" x="928" y="672" w="32" h="32" xo="96" yo="64" id="10015845" name="inst_C252E585" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_environment" x="704" y="576" w="32" h="32" xo="96" yo="64" id="10015846" name="inst_F91B1AFE" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_environment" x="640" y="640" w="32" h="32" xo="96" yo="64" id="10015847" name="inst_1285386A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_environment" x="640" y="512" w="32" h="32" xo="96" yo="64" id="10015848" name="inst_84FD8657" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
