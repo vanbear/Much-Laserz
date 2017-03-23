@@ -3,8 +3,8 @@
   <caption></caption>
   <width>2048</width>
   <height>2048</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>16</vsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -108,12 +108,12 @@
     <instance objName="obj_water_surface" x="1280" y="1152" name="inst_EED94279" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_water_surface" x="1216" y="1152" name="inst_8EB18519" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_emitter" x="864" y="768" name="inst_E21582CB" locked="0" code="ident = 12;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mirrortest" x="960" y="864" name="inst_15841C40" locked="0" code="pthname = pth_WFA_1_1;&#xA;ident = 11;" scaleX="1" scaleY="1" colour="4294967295" rotation="45"/>
+    <instance objName="obj_mirrortest" x="960" y="832" name="inst_15841C40" locked="0" code="pthname = pth_WFA_1_1;&#xA;ident = 11;" scaleX="1" scaleY="1" colour="4294967295" rotation="45"/>
     <instance objName="obj_movepanel" x="1088" y="864" name="inst_37CF514C" locked="0" code="ident = 11;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mirrortest" x="1376" y="768" name="inst_F3136F74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="45"/>
-    <instance objName="obj_mirrortest" x="1376" y="864" name="inst_7C8D26FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="135"/>
+    <instance objName="obj_mirrortest" x="1376" y="832" name="inst_7C8D26FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="135"/>
     <instance objName="obj_power" x="1024" y="864" name="inst_02094B27" locked="0" code="ident = 12;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sensor" x="1152" y="800" name="inst_F800B2C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sensor" x="1152" y="800" name="inst_F800B2C6" locked="0" code="ident = 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1408" y="576" name="inst_BD8B5901" locked="0" code="" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_movingplatform" x="1504" y="576" name="inst_B7DBC9F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_movingplatform" x="1856" y="640" name="inst_AAA227C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -121,7 +121,7 @@
     <instance objName="obj_wall" x="1888" y="800" name="inst_8DEEB342" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1824" y="864" name="inst_4E8EE973" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1792" y="768" name="inst_14554956" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door" x="864" y="832" name="inst_A70D147B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door" x="864" y="832" name="inst_A70D147B" locked="0" code="ident[0] = 1;&#xA;ident[1] = 2;&#xA;ident[2] = 3;&#xA;ident[3] = 37;&#xA;ident[4] = 38;&#xA;ident[5] = 44;&#xA;ident[6] = 45;&#xA;ident[7] = 46;&#xA;ident[8] = 50;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_emitter_timer" x="1440" y="672" name="inst_56D858A7" locked="0" code="spd = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1408" y="480" name="inst_03B868FD" locked="0" code="" scaleX="17" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1408" y="384" name="inst_4213C3D7" locked="0" code="" scaleX="1" scaleY="1.03225803375244" colour="4294967295" rotation="0"/>
@@ -129,7 +129,7 @@
     <instance objName="obj_wall" x="1152" y="576" name="inst_ED1EB821" locked="0" code="" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1184" y="640" name="inst_E38F622E" locked="0" code="" scaleX="7" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_emitter" x="1185" y="687" name="inst_37C98230" locked="0" code="ident = 31;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sensor" x="1393" y="688" name="inst_6A0722D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sensor" x="1393" y="688" name="inst_6A0722D8" locked="0" code="ident = 38;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_power" x="1280" y="480" name="inst_5C0EB45E" locked="0" code="ident = 31;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="128" y="448" name="inst_DD20A295" locked="0" code="" scaleX="1" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="128" y="736" name="inst_AB342E1A" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
@@ -138,7 +138,7 @@
     <instance objName="obj_platform" x="96" y="704" name="inst_2367C923" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_emitter_timer" x="64" y="608" name="inst_B318D211" locked="0" code="spd = .5;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_emitter_timer" x="64" y="768" name="inst_1EBBB804" locked="0" code="spd = .5;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_emitter" x="736" y="512" name="inst_26858CC1" locked="0" code="ident = 41;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_emitter" x="800" y="512" name="inst_26858CC1" locked="0" code="ident = 41;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="608" y="448" name="inst_686CC4B4" locked="0" code="" scaleX="1" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="obj_splitter_ALL" x="896" y="512" name="inst_BD025AC3" locked="0" code="ident = 42;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wheel" x="1056" y="672" name="inst_DC5CA8A6" locked="0" code="ident = 42;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -153,9 +153,9 @@
     <instance objName="obj_wall_switchable" x="1088" y="480" name="inst_95E14FF7" locked="0" code="ident = 44;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wheel" x="864" y="672" name="inst_E127844D" locked="0" code="ident = 42;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="928" y="672" name="inst_83131E81" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sensor" x="736" y="640" name="inst_F970F252" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sensor" x="736" y="640" name="inst_F970F252" locked="0" code="ident = 46;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_power" x="1120" y="672" name="inst_180D62AD" locked="0" code="ident = 41;&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wheel" x="688" y="496" name="inst_B8276BAD" locked="0" code="ident = 42;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wheel" x="720" y="560" name="inst_B8276BAD" locked="0" code="ident = 42;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="640" y="640" name="inst_6239A67A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="704" y="576" name="inst_123C62B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="640" y="512" name="inst_BC4DF993" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -170,11 +170,11 @@
     <instance objName="obj_wall" x="32" y="352" name="inst_48106AFD" locked="0" code="" scaleX="16" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_switchable_reverse" x="672" y="512" name="inst_D9D718A5" locked="0" code="ident = 45;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_switchable_reverse" x="704" y="512" name="inst_86996572" locked="0" code="ident = 45;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall_switchable_reverse" x="704" y="480" name="inst_AA3BBD0B" locked="0" code="ident = 45;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall_switchable_reverse" x="704" y="448" name="inst_682CBDFF" locked="0" code="ident = 45;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall_switchable_reverse" x="704" y="416" name="inst_D8B92168" locked="0" code="ident = 45;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall_switchable_reverse" x="704" y="384" name="inst_6F2A2F0A" locked="0" code="ident = 45;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_power" x="672" y="416" name="inst_29529530" locked="0" code="ident = 45;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_switchable_reverse" x="736" y="480" name="inst_AA3BBD0B" locked="0" code="ident = 45;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_switchable_reverse" x="736" y="448" name="inst_682CBDFF" locked="0" code="ident = 45;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_switchable_reverse" x="736" y="416" name="inst_D8B92168" locked="0" code="ident = 45;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_switchable_reverse" x="736" y="384" name="inst_6F2A2F0A" locked="0" code="ident = 45;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_power" x="656" y="480" name="inst_29529530" locked="0" code="ident = 45;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_emitter" x="640" y="320" name="inst_9A2043C8" locked="0" code="ident = 45;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sensor" x="1152" y="320" name="inst_735E6412" locked="0" code="ident = 45;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_switchable" x="608" y="384" name="inst_3832FC7C" locked="0" code="ident = 45;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -193,9 +193,7 @@
     <instance objName="obj_wall_switchable" x="1408" y="544" name="inst_5313385B" locked="0" code="ident = 37;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_emitter" x="1472" y="448" name="inst_1E50F147" locked="0" code="ident = 37;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sensor" x="1920" y="448" name="inst_01FF3CE0" locked="0" code="ident = 37;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall_switchable" x="128" y="832" name="inst_AECAD1D7" locked="0" code="ident = 101;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall_switchable" x="128" y="864" name="inst_5C842157" locked="0" code="ident = 101;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sensor" x="288" y="512" name="inst_72D479B2" locked="0" code="ident = 101;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sensor" x="288" y="512" name="inst_72D479B2" locked="0" code="ident = 50;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_emitter" x="192" y="512" name="inst_EB6DF082" locked="0" code="ident = 101;&#xA;pthname = pth_WFA_2_1;&#xA;active = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="draw_paths" x="64" y="32" name="inst_4E355E6D" locked="0" code="paths[0] = pth_WFA_1_1;&#xA;&#xA;paths[1] = pth_WFA_2_1;&#xA;paths[2] = pth_WFA_2_2;&#xA;paths[3] = pth_WFA_2_3;&#xA;paths[4] = pth_WFA_2_4;&#xA;paths[5] = pth_WFA_2_5;&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="160" y="448" name="inst_F1EEC943" locked="0" code="" scaleX="14" scaleY="1" colour="4294967295" rotation="0"/>
@@ -210,6 +208,7 @@
     <instance objName="obj_movepanel" x="368" y="416" name="inst_1BB72282" locked="0" code="ident = 106;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_movepanel" x="432" y="416" name="inst_C093AC7D" locked="0" code="ident = 107;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_movepanel" x="496" y="416" name="inst_D0982EBA" locked="0" code="ident = 108;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wheel" x="720" y="480" name="inst_A688D84C" locked="0" code="ident = 42;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="ts_environment" x="128" y="736" w="32" h="32" xo="64" yo="224" id="10014086" name="inst_9466E351" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -2220,8 +2219,6 @@
     <tile bgName="ts_blackrectangles" x="576" y="64" w="32" h="32" xo="32" yo="0" id="10016874" name="inst_399FE09F" depth="-10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_blackrectangles" x="576" y="32" w="32" h="32" xo="32" yo="0" id="10016875" name="inst_014E0650" depth="-10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_blackrectangles" x="576" y="0" w="32" h="32" xo="32" yo="0" id="10016876" name="inst_6E297BCD" depth="-10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_environment" x="128" y="384" w="32" h="32" xo="64" yo="192" id="10016908" name="inst_99E72073" depth="-10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_environment" x="128" y="416" w="32" h="32" xo="64" yo="192" id="10016909" name="inst_B5112993" depth="-10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_blackrectangles" x="96" y="384" w="32" h="32" xo="128" yo="0" id="10016912" name="inst_73BD44FB" depth="-10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_blackrectangles" x="64" y="384" w="32" h="32" xo="128" yo="0" id="10016913" name="inst_5BE3BBAE" depth="-10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_blackrectangles" x="64" y="416" w="32" h="32" xo="128" yo="0" id="10016914" name="inst_10CA68EE" depth="-10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

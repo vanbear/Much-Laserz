@@ -103,6 +103,7 @@
     <sprite>sprites\spr_bend</sprite>
     <sprite>sprites\spr_water_surface</sprite>
     <sprite>sprites\spr_empty</sprite>
+    <sprite>sprites\testest</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\ts_environment</background>
@@ -178,6 +179,7 @@
         <object>objects\obj_menu_lvl</object>
         <object>objects\obj_menu</object>
         <object>objects\obj_about</object>
+        <object>objects\obj_WFA_intro</object>
       </objects>
       <object>objects\obj_point_counter</object>
     </objects>
@@ -243,6 +245,7 @@
       <room>rooms\rm_level_10</room>
       <room>rooms\rm_level_11</room>
       <room>rooms\rm_level_fizbit</room>
+      <room>rooms\rm_WFA_intro</room>
       <room>rooms\rm_level_WFA</room>
     </rooms>
   </rooms>
