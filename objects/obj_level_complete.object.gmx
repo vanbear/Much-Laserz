@@ -25,24 +25,28 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>win_surface = surface_create(view_wview[0], view_hview[0]);
+            <string>/// Create surface
 
-surface_set_target(win_surface);
-draw_clear_alpha(c_black,0);
-with(all)
+win_bg = scr_screen_capture();
+for (i = 0; i &lt; instance_number(obj_player); i++)
 {
-    if (visible)
-    {
-        x = x-view_xview[0];
-        y = y-view_yview[0];
-        event_perform(ev_draw,0);
-        x = x+view_xview[0];
-        y = y+view_yview[0];
-    }
+    players[i] = instance_find(obj_player,i);
 }
-surface_reset_target();
+
+// ======== przypisanie predkoscci gracza do tymczasowych zmiennych
+for (i = 0; i &lt; instance_number(obj_player); i++)
+{
+    player_temp_x[i] = players[i].x;
+    player_temp_y[i] = players[i].y;
+    player_temp_vspd[i] = players[i].vspd;
+    player_temp_hspd[i] = players[i].hsp_final;
+    player_temp_hsp_carry[i] = players[i].hsp_carry;
+}
+// =================================
 
 instance_deactivate_all(true);
+
+
 instance_activate_object(obj_music_emitter);
 visible=true;
 </string>
@@ -110,18 +114,11 @@ if next_key
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// przyciemnienie
-
-if (surface_exists(win_surface))
-{
- draw_surface(win_surface, 0, 0);
-}
-
-draw_set_color(c_black);
+            <string>draw_set_color(c_black);
 draw_set_alpha(.5);
-draw_rectangle(0,0,view_wport[0],view_hport[0],0);
+//draw_rectangle(0,0,view_wport[0],view_hport[0],0);
+draw_rectangle(0,0,display_get_gui_width(),display_get_gui_height(),0);
 draw_set_alpha(1);
-draw_set_color(c_white);
 </string>
           </argument>
         </arguments>
@@ -142,13 +139,18 @@ draw_set_color(c_white);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(c_white);
+            <string>/// Napis
+
+draw_set_color(c_white);
 draw_set_halign(fa_center);
 draw_set_valign(fa_center);
 draw_set_font(fnt_arcade);
 
-var xx = view_wview[0]/2;
-var yy =view_hview[0]/2
+//var xx = view_wview[0]/2;
+//var yy =view_hview[0]/2
+
+var xx = display_get_gui_width()/2;
+var yy = display_get_gui_height()/2;
 
 draw_text(xx,yy,"Gratulacje!");
 
@@ -193,16 +195,8 @@ draw_set_color(c_white);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/* if (surface_exists(win_surface))
-{
- draw_surface(win_surface, view_xview[0], view_yview[0]);
-}
-
-
-draw_set_color(c_black);
-draw_set_alpha(.5);
-draw_rectangle(view_xview[0],view_yview[0],view_wview[0],view_hview[0],0);
-draw_set_alpha(1);
+            <string>/// Draw background
+if background_exists(win_bg) draw_background_ext(win_bg, view_xview[0], view_yview[0], 1, 1, 0, -1, 1);
 </string>
           </argument>
         </arguments>

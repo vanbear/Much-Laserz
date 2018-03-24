@@ -155,6 +155,7 @@
       <script>scripts\scr_splitter_NW.gml</script>
     </scripts>
     <script>scripts\draw_text_outline.gml</script>
+    <script>scripts\scr_screen_capture.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_arcade</font>
@@ -164,6 +165,7 @@
     <objects name="game">
       <object>objects\obj_master</object>
       <object>objects\obj_pause</object>
+      <object>objects\obj_display_manager</object>
       <object>objects\draw_paths</object>
       <object>objects\obj_level_complete</object>
       <object>objects\obj_music_emitter</object>
@@ -225,6 +227,7 @@
   </objects>
   <rooms name="rooms">
     <rooms name="menus">
+      <room>rooms\display_setup</room>
       <room>rooms\rm_splash</room>
       <room>rooms\rm_menu</room>
       <room>rooms\rm_level_select</room>

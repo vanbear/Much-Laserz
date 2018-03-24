@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>pause_surface = surface_create(view_wview[0], view_hview[0]);
+            <string>/// Create surface
 
-
+pause_bg = scr_screen_capture();
 for (i = 0; i &lt; instance_number(obj_player); i++)
 {
     players[i] = instance_find(obj_player,i);
@@ -42,26 +42,36 @@ for (i = 0; i &lt; instance_number(obj_player); i++)
     player_temp_hspd[i] = players[i].hsp_final;
     player_temp_hsp_carry[i] = players[i].hsp_carry;
 }
-
 // =================================
 
-surface_set_target(pause_surface);
-draw_clear_alpha(c_black,0);
-with(all)
-{
-    if (visible)
-    {
-        x = x-view_xview[0];
-        y = y-view_yview[0];
-        event_perform(ev_draw,0);
-        x = x+view_xview[0];
-        y = y+view_yview[0];
-    }
-}
-surface_reset_target();
 instance_deactivate_all(true);
 
-visible=true;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Destroy background
+
+if background_exists(pause_bg) background_delete(pause_bg);
 </string>
           </argument>
         </arguments>
@@ -84,13 +94,14 @@ visible=true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var esc_key = keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0,gp_start);
+            <string>/// Controls
+var esc_key = keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0,gp_start);
 var quit_key = keyboard_check_pressed(ord("P")) || gamepad_button_check_pressed(0,gp_select);
 
 
 if (esc_key)
 {
-    surface_free(pause_surface);
+    //surface_free(pause_surface);
     instance_activate_all();
     // przywrocenie predkosci gracza 
     for (i = 0; i &lt; array_length_1d(players); i++)
@@ -101,13 +112,13 @@ if (esc_key)
         players[i].hsp_final = player_temp_hspd[i];
         players[i].hsp_carry = player_temp_hsp_carry[i];
     }
-    
+    if background_exists(pause_bg) background_delete(pause_bg);
     instance_destroy();
 }
 
 if (quit_key)
 {
-    surface_free(pause_surface);
+    //surface_free(pause_surface);
     instance_activate_all();
     instance_destroy();
     room_goto(rm_menu);
@@ -136,14 +147,10 @@ if (quit_key)
             <kind>1</kind>
             <string>/// przyciemnienie
 
-if (surface_exists(pause_surface))
-{
- draw_surface(pause_surface, 0, 0);
-}
-
 draw_set_color(c_black);
 draw_set_alpha(.5);
-draw_rectangle(0,0,view_wport[0],view_hport[0],0);
+//draw_rectangle(0,0,view_wport[0],view_hport[0],0);
+draw_rectangle(0,0,display_get_gui_width(),display_get_gui_height(),0);
 draw_set_alpha(1);
 </string>
           </argument>
@@ -171,8 +178,11 @@ draw_set_halign(fa_center);
 draw_set_valign(fa_center);
 draw_set_font(fnt_arcade);
 
-var xx = view_wview[0]/2;
-var yy =view_hview[0]/2
+//var xx = view_wview[0]/2;
+//var yy =view_hview[0]/2
+
+var xx = display_get_gui_width()/2;
+var yy = display_get_gui_height()/2;
 
 draw_text(xx,yy,"Pauza");
 
@@ -218,17 +228,8 @@ draw_set_valign(fa_top);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// przyciemnienie
-/*
-if (surface_exists(pause_surface))
-{
- draw_surface(pause_surface, view_xview[0], view_yview[0]);
-}
-
-draw_set_color(c_black);
-draw_set_alpha(.5);
-draw_rectangle(view_xview[0],view_yview[0],view_wview[0],view_hview[0],0);
-draw_set_alpha(1);
+            <string>/// Draw background
+if background_exists(pause_bg) draw_background_ext(pause_bg, view_xview[0], view_yview[0], 1, 1, 0, -1, 1);
 </string>
           </argument>
         </arguments>
