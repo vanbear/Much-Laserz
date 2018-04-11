@@ -47,8 +47,9 @@ for (i = 0; i &lt; instance_number(obj_player); i++)
 instance_deactivate_all(true);
 
 
+instance_activate_object(obj_master);
 instance_activate_object(obj_music_emitter);
-visible=true;
+//visible=true;
 </string>
           </argument>
         </arguments>
@@ -71,7 +72,9 @@ visible=true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var menu_key = keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0,gp_face2);
+            <string>/// Keys
+
+var menu_key = keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0,gp_face2);
 var next_key = keyboard_check_pressed(vk_enter) || gamepad_button_check_pressed(0,gp_face1);
 
 if menu_key
@@ -88,7 +91,11 @@ if next_key
               room_goto(rm_level_select);
            else
                if room_exists(global.levels[i+1])
-                  room_goto(global.levels[i+1]);
+               {
+                    global.current_level_name = global.names[i];
+                    room_goto(global.levels[i+1]);
+               }
+                  
 
     }    
 }
@@ -114,7 +121,9 @@ if next_key
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(c_black);
+            <string>/// przyciemnienie
+
+draw_set_color(c_black);
 draw_set_alpha(.5);
 //draw_rectangle(0,0,view_wport[0],view_hport[0],0);
 draw_rectangle(0,0,display_get_gui_width(),display_get_gui_height(),0);
@@ -173,6 +182,8 @@ draw_set_font(-1);
 draw_set_halign(-1);
 draw_set_valign(-1);
 draw_set_color(c_white);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
 </string>
           </argument>
         </arguments>

@@ -45,8 +45,8 @@ for (i = 0; i &lt; instance_number(obj_player); i++)
 // =================================
 
 instance_deactivate_all(true);
-
-
+instance_activate_object(obj_master);
+instance_activate_object(obj_music_emitter);
 </string>
           </argument>
         </arguments>

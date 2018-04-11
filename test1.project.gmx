@@ -238,20 +238,22 @@
       <room>rooms\PLATFORM_TEST</room>
     </rooms>
     <rooms name="levels">
-      <room>rooms\rm_level_1</room>
-      <room>rooms\rm_level_2</room>
-      <room>rooms\rm_level_3</room>
-      <room>rooms\rm_level_4</room>
-      <room>rooms\rm_level_5</room>
-      <room>rooms\rm_level_6</room>
-      <room>rooms\rm_level_7</room>
-      <room>rooms\rm_level_8</room>
-      <room>rooms\rm_level_9</room>
-      <room>rooms\rm_level_10</room>
-      <room>rooms\rm_level_11</room>
+      <room>rooms\rm_level_firststeps</room>
+      <room>rooms\rm_level_firstlasers</room>
+      <room>rooms\rm_level_firstplatforms</room>
+      <room>rooms\rm_level_watchout</room>
+      <room>rooms\rm_level_rabbithole</room>
+      <room>rooms\rm_level_wet</room>
+      <room>rooms\rm_level_ddlystar</room>
+      <room>rooms\rm_level_double</room>
+    </rooms>
+    <rooms name="rejected">
+      <room>rooms\Xrm_level_chamskie</room>
+      <room>rooms\Xrm_level_8</room>
+      <room>rooms\Xrm_level_blackpit</room>
       <room>rooms\rm_level_fizbit</room>
-      <room>rooms\rm_WFA_intro</room>
       <room>rooms\rm_level_WFA</room>
+      <room>rooms\rm_WFA_intro</room>
     </rooms>
   </rooms>
   <help>

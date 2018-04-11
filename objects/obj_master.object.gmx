@@ -26,35 +26,26 @@
           <argument>
             <kind>1</kind>
             <string>/// lista poziomow
+global.current_level_name = "Menu";
 
-global.levels[0] = rm_WFA_intro;
-global.levels[1] = rm_level_1;
-global.levels[2] = rm_level_2;
-global.levels[3] = rm_level_3;
-global.levels[4] = rm_level_4;
-global.levels[5] = rm_level_5;
-global.levels[6] = rm_level_6;
-global.levels[7] = rm_level_7;
-global.levels[8] = rm_level_8;
-global.levels[9] = rm_level_9;
-global.levels[10] = rm_level_10;
-global.levels[11] = rm_level_11;
-global.levels[12] = rm_level_fizbit;
+global.levels[0] = rm_level_firststeps;
+global.levels[1] = rm_level_firstlasers;
+global.levels[2] = rm_level_firstplatforms;
+global.levels[3] = rm_level_watchout;
+global.levels[4] = rm_level_rabbithole;
+global.levels[5] = rm_level_wet;
+global.levels[6] = rm_level_ddlystar;
+global.levels[7] = rm_level_double;
 
 
-global.names[0] = "Dni Otwarte";
-global.names[1] = "Poziom 1";
-global.names[2] = "Poziom 2";
-global.names[3] = "Poziom 3";
-global.names[4] = "Poziom 4";
-global.names[5] = "Poziom 5";
-global.names[6] = "Poziom 6";
-global.names[7] = "Poziom 7";
-global.names[8] = "Poziom 8";
-global.names[9] = "Poziom 9";
-global.names[10] = "Poziom 10";
-global.names[11] = "Poziom 11";
-global.names[12] = "Fizbit";
+global.names[0] = "First jumps...";
+global.names[1] = "...first lasers...";
+global.names[2] = "...and first platforms.";
+global.names[3] = "Watch out.";
+global.names[4] = "Get down the rabbit hole";
+global.names[5] = "Goin' wet";
+global.names[6] = "Deadly star";
+global.names[7] = "Double trouble.";
 
 
 </string>
@@ -83,6 +74,7 @@ audio_master_gain(1);
 texture_set_interpolation(false);
 
 global.max_points = 0;
+global.debug = false;
 </string>
           </argument>
         </arguments>
@@ -130,6 +122,13 @@ global.max_points = 0;
             <kind>1</kind>
             <string>/// reset punktow
 
+var debug_key = keyboard_check_pressed(vk_f12);
+if (debug_key)
+{
+    if (global.debug) global.debug = false;
+    else global.debug = true;
+}
+
 if room==rm_level_select global.max_points = 0;
 </string>
           </argument>
@@ -153,12 +152,16 @@ if room==rm_level_select global.max_points = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(-1);
-draw_set_color(c_white);
-draw_text(10, 10, "FPS = " + string(fps));  // wyswietl licznik fps
+            <string>///Debug stuff
 
-display_set_gui_size(1024, 768);
-//draw_set_color(-1);
+if (global.debug)
+{
+    draw_set_font(-1);
+    draw_set_color(c_white);
+    draw_text(10, 10, "FPS = " + string(fps));  // wyswietl licznik fps
+    draw_text(10, 25, "Level: " + global.current_level_name); // wyswietl nazwe poziomu
+    draw_set_color(-1);
+}
 </string>
           </argument>
         </arguments>
