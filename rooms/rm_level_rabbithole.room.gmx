@@ -91,7 +91,6 @@
     <instance objName="obj_splitter_S" x="608" y="672" name="inst_35BEE4D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sensor" x="416" y="672" name="inst_0AF92387" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sensor" x="576" y="672" name="inst_AC40FEC7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_power" x="416" y="800" name="inst_B3617665" locked="0" code="ident = 1;&#xA;active = true;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_power" x="576" y="800" name="inst_565BBF96" locked="0" code="ident = 2;&#xA;active = true;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="736" y="704" name="inst_D6FDE9B0" locked="0" code="" scaleX="1" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="256" y="704" name="inst_4576939E" locked="0" code="" scaleX="1" scaleY="10" colour="4294967295" rotation="0"/>
