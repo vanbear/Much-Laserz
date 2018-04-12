@@ -105,6 +105,7 @@
     <sprite>sprites\spr_empty</sprite>
     <sprite>sprites\testest</sprite>
     <sprite>sprites\spr_arrow_down</sprite>
+    <sprite>sprites\napis_wfa</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\ts_environment</background>
@@ -224,6 +225,7 @@
     </objects>
     <object>objects\obj_bend</object>
     <object>objects\obj_arrow_down</object>
+    <object>objects\obj_dniotwarte_text</object>
   </objects>
   <rooms name="rooms">
     <rooms name="menus">

@@ -92,7 +92,7 @@ if next_key
            else
                if room_exists(global.levels[i+1])
                {
-                    global.current_level_name = global.names[i];
+                    global.current_level_name = global.names[i+1];
                     room_goto(global.levels[i+1]);
                }
                   

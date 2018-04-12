@@ -4,7 +4,7 @@
   <width>864</width>
   <height>448</height>
   <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -67,6 +67,7 @@
     <instance objName="obj_wall" x="320" y="224" name="inst_79294578" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tutorial_jump_trigger" x="224" y="160" name="inst_22F60370" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_tutorial_use_trigger" x="512" y="160" name="inst_2D243D43" locked="0" code="" scaleX="2.06451606750488" scaleY="3.09677410125732" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dniotwarte_text" x="432" y="0" name="inst_AB8D3E35" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="ts_environment" x="160" y="256" w="32" h="32" xo="32" yo="0" id="10000028" name="inst_1178AEF4" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
