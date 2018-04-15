@@ -187,14 +187,14 @@ var yy = display_get_gui_height()/2;
 draw_text(xx,yy,"Pauza");
 
 // ======================
-var str2 = " /ESC - Wznowienie gry";
+var str2 = " /ESC - Resume";
 var yy2 = yy+string_height("a")+sprite_get_height(spr_button_gpSTART);
 
 draw_sprite_ext( spr_button_gpSTART, 0, xx - string_width(str2)/2, yy2, 1, 1, 0, c_white, 1);
 draw_text_transformed( xx, yy2 , str2, 1, 1, 0);
 
 // ====================== 
-var str3 = " /P - Powrot do menu";
+var str3 = " /P - Exit to menu";
 var yy3 = yy2+string_height("a")+sprite_get_height(spr_button_gpSELECT);
 
 draw_sprite_ext( spr_button_gpSELECT, 0, xx - string_width(str3)/2, yy3, 1, 1, 0, c_white, 1);

@@ -115,7 +115,7 @@ draw_set_alpha(a);
 draw_set_halign(fa_center);
 draw_set_font(fnt_arcade);
 draw_set_color(c_white);
-draw_text(x,y+sprite_height/2,"a game by Wonsu");
+draw_text(x,y+sprite_height/2,"a game by vanbear");
 
 
 // default

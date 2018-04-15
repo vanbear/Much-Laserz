@@ -26,8 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>menu[0] = "Start";
-menu[1] = "O grze";
-menu[2] = "Wyjscie";
+menu[1] = "About";
+menu[2] = "Exit";
 
 space = 64;
 mpos = 0;
@@ -114,16 +114,16 @@ draw_set_valign(fa_middle);
 draw_set_font(fnt_arcade);
 draw_set_color(c_white);
 
-
+var xx = view_wview[0]/2
 for (var m = 0; m &lt; array_length_1d(menu); m ++)
 {
     if (m != mpos)
-       draw_text(x+space, y+(m*space), string(menu[m]));
+       draw_text(xx, y+(m*space), string(menu[m]));
     else
-        draw_text(x+space, y+(m*space), string("&gt; "+menu[m]+" &lt;"));
+        draw_text(xx, y+(m*space), string("&gt; "+menu[m]+" &lt;"));
 }
 
-draw_sprite(spr_logo, 0, view_wview[0]/2, y-sprite_get_height(spr_logo));
+draw_sprite(spr_logo, 0, view_wview[0]/2, 10+sprite_get_height(spr_logo));
 
 
 //draw_sprite(sprite_index, 0, x, y + mpos * space);

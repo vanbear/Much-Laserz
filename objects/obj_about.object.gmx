@@ -81,20 +81,20 @@ draw_set_valign(fa_middle);
 draw_set_font(fnt_arcade);
 draw_set_color(c_white);
 
-xx = view_wview[0]/2
-yy = view_hview[0]/2
-yl = sprite_get_height(spr_logo);
+var xx = view_wview[0]/2
+var yy = view_hview[0]/2
+var yl = 10+sprite_get_height(spr_logo);
 
 draw_sprite(spr_logo, 0, xx, yl);
 
-var str_by = "By Daniel Was.##Informatyka Stosowana i Systemy Pomiarowe#Uniwersytet Wroclawski##github.com/vanbear/Much-Laserz##";
+var str_by = "By Daniel Was##";
 
-var str_music = "Muzyka: Eric Skiff#http://ericskiff.com/##";
-var str_sfx = "Dzwieki: ChipTone #http://sfbgames.com/chiptone/##";
+var str_music = "Music: Eric Skiff#http://ericskiff.com/##";
+var str_sfx = "Sounds: ChipTone #http://sfbgames.com/chiptone/##";
 
-var str_char = "Styl postaci: Capcom (Megaman)##"
+var str_char = "Character design: Capcom (Megaman)##"
 
-var str_thanks = "Podziekowania dla: HeartBeast, Shaun Spalding, #Making Games 101, xot, strawbryjam (GMLScripts)# ";
+var str_thanks = "Big lovely thanks to:#HeartBeast, Shaun Spalding, Making Games 101,# xot, strawbryjam (GMLScripts), PixelatedPope";
 
 var str_final = str_by+str_music+str_sfx+str_char+str_thanks;
 draw_text(xx,yy+(string_height(str_final)/3)-50,str_final);

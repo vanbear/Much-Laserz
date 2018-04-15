@@ -130,8 +130,8 @@ y = view_hview/2 - mpos*space;
 draw_set_valign(fa_middle);
 draw_set_font(fnt_arcade);
 draw_set_color(c_white);
-
-x = view_wview[0]/2 - string_width(global.names[4])/2
+var xx = view_wview[0]/2;
+//x = view_wview[0]/2 - string_width(global.names[4])/2
 
 for (var m = 0; m &lt; array_length_1d(global.levels); m ++)
 {
@@ -141,10 +141,10 @@ for (var m = 0; m &lt; array_length_1d(global.levels); m ++)
 
     // wyswietlanie nazw
     if (m != mpos)
-       draw_text(x+space, y+(m*space), string(global.names[m]));
+       draw_text(xx, y+(m*space), string(global.names[m]));
     // rysowanie strzalek
     else
-        draw_text(x+space, y+(m*space), string("&gt; "+global.names[m]+" &lt;"));
+        draw_text(xx, y+(m*space), string("&gt; "+global.names[m]+" &lt;"));
 }
 //draw_sprite(sprite_index, 0, x + 16, y + mpos * space);
 

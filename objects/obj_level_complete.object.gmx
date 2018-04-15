@@ -161,17 +161,17 @@ draw_set_font(fnt_arcade);
 var xx = display_get_gui_width()/2;
 var yy = display_get_gui_height()/2;
 
-draw_text(xx,yy,"Gratulacje!");
+draw_text(xx,yy,"Good job!");
 
 // ======================
-var str2 = " /Enter - Nastepny poziom";
+var str2 = " /Enter - Next level";
 var yy2 = yy+string_height("a")+sprite_get_height(spr_button_gpA);
 
 draw_sprite_ext( spr_button_gpA, 0, xx - string_width(str2)/2, yy2, 1, 1, 0, c_white, 1);
 draw_text_transformed( xx , yy2 , str2, 1, 1, 0);
 
 // ====================== 
-var str3 = " /ESC - Powrot do menu";
+var str3 = " /ESC - Exit to menu";
 var yy3 = yy2+string_height("a")+sprite_get_height(spr_button_gpB);
 
 draw_sprite_ext( spr_button_gpB, 0, xx - string_width(str3)/2, yy3, 1, 1, 0, c_white, 1);
