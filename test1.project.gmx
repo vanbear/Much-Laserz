@@ -134,7 +134,6 @@
     </paths>
   </paths>
   <scripts name="scripts">
-    <script>scripts\draw_focus_outline.gml</script>
     <script>scripts\scr_player_dead.gml</script>
     <scripts name="laser">
       <script>scripts\draw_laser.gml</script>
@@ -156,13 +155,23 @@
       <script>scripts\scr_splitter_NW.gml</script>
     </scripts>
     <script>scripts\draw_text_outline.gml</script>
-    <script>scripts\scr_screen_capture.gml</script>
+    <scripts name="game">
+      <script>scripts\draw_focus_outline.gml</script>
+      <script>scripts\scr_screen_capture.gml</script>
+    </scripts>
+    <scripts name="states">
+      <scripts name="player">
+        <script>scripts\scr_state_player_idle.gml</script>
+        <script>scripts\scr_get_input.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_arcade</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
+    <object>objects\obj_player1</object>
     <objects name="game">
       <object>objects\obj_master</object>
       <object>objects\obj_pause</object>
@@ -230,6 +239,7 @@
   <rooms name="rooms">
     <rooms name="menus">
       <room>rooms\display_setup</room>
+      <room>rooms\playerstate_test</room>
       <room>rooms\rm_splash</room>
       <room>rooms\rm_menu</room>
       <room>rooms\rm_level_select</room>
